@@ -1,449 +1,420 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ro">
   <head>
-    <!-- Basic -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="content-language" content="ro-MD" />
 
-    <!-- SEO -->
     <title>Despre Atomics – Agenție Digitală din Chișinău, Moldova</title>
-    <meta
-      name="description"
-      content="Află cine este Atomics, agenție digitală din Chișinău, Moldova. Suntem o echipă de designeri și dezvoltatori care creează soluții digitale moderne pentru agenții și branduri."
-    />
+    <meta name="description" content="Cunoaște echipa Atomics – agenție digitală din Chișinău. Construim platforme web, branduri și strategii digitale pentru afaceri care vor impact real." />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-
-    <!-- Canonical -->
     <link rel="canonical" href="https://atomics.md/despre-noi" />
+    <link rel="alternate" hreflang="ro-MD" href="https://atomics.md/despre-noi" />
 
-    <!-- Browser UI -->
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#03010e" />
     <meta name="color-scheme" content="light dark" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Atomics" />
     <meta property="og:locale" content="ro_MD" />
-    <meta
-      property="og:title"
-      content="Despre Atomics – Agenție Digitală din Chișinău, Moldova"
-    />
-    <meta
-      property="og:description"
-      content="Descoperă povestea Atomics – agenție digitală din Chișinău care colaborează cu agenții și branduri din întreaga lume."
-    />
+    <meta property="og:title" content="Despre Atomics – Agenție Digitală din Chișinău" />
+    <meta property="og:description" content="Cunoaște echipa Atomics. Construim platforme web moderne, identități de brand și strategii digitale pentru afaceri din Moldova și din lume." />
     <meta property="og:url" content="https://atomics.md/despre-noi" />
     <meta property="og:image" content="https://atomics.md/img/og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Echipa Atomics – agenție digitală din Chișinău, Moldova"
-    />
+    <meta property="og:image:alt" content="Echipa Atomics – agenție digitală din Chișinău, Moldova" />
 
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Despre Atomics – Agenție Digitală Moldova"
-    />
-    <meta
-      name="twitter:description"
-      content="Cunoaște echipa Atomics – agenție digitală din Chișinău specializată în web design și dezvoltare."
-    />
+    <meta name="twitter:title" content="Despre Atomics – Agenție Digitală Moldova" />
+    <meta name="twitter:description" content="Cunoaște echipa Atomics – agenție digitală din Chișinău specializată în web design și soluții digitale." />
     <meta name="twitter:image" content="https://atomics.md/img/og.jpg" />
 
-    <!-- Favicons -->
-    <link rel="icon" href="/img/favicons/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/img/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/img/favicons/favicon-16x16.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/img/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="mask-icon"
-      href="/img/favicons/safari-pinned-tab.svg"
-      color="#000000"
-    />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicons/android-icon-192x192.png" />
 
-    <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/enhancements.css" />
 
-    <!-- Structured Data: About Page -->
+    <style>
+      /* ── Despre noi – page styles ── */
+
+      .dn-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(124,5,226,0.18);
+        border: 1px solid rgba(124,5,226,0.4);
+        border-radius: 24px;
+        padding: 6px 18px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #00ffd4;
+        margin-bottom: 28px;
+      }
+      .dn-badge::before {
+        content: '';
+        width: 7px; height: 7px;
+        background: #00ffd4;
+        border-radius: 50%;
+        box-shadow: 0 0 6px #00ffd4;
+        flex-shrink: 0;
+      }
+
+      /* ── Mission ── */
+      .dn-mission {
+        background: linear-gradient(160deg,#0d0720 0%,#050218 60%,#03010e 100%);
+        padding: 120px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .dn-mission::before {
+        content: '';
+        position: absolute;
+        top: -200px; left: 50%;
+        transform: translateX(-50%);
+        width: 700px; height: 700px;
+        background: radial-gradient(circle,rgba(124,5,226,0.13) 0%,transparent 70%);
+        pointer-events: none;
+      }
+      .dn-mission__inner {
+        max-width: 860px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+      .dn-overline {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #ea2866;
+        margin-bottom: 16px;
+      }
+      .dn-mission__overline {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #00c694;
+        margin-bottom: 20px;
+      }
+      .dn-mission__quote {
+        font-size: clamp(26px,3.5vw,46px);
+        font-weight: 700;
+        line-height: 1.2;
+        color: #fff;
+        letter-spacing: -0.02em;
+        margin-bottom: 32px;
+        font-family: "montserrat","hkgrotesk","Arial",sans-serif;
+      }
+      .dn-mission__quote em {
+        font-style: normal;
+        background: linear-gradient(90deg,#00ffd4,#00a0f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .dn-mission__text {
+        font-size: 18px;
+        line-height: 1.8;
+        color: rgba(255,255,255,0.68);
+        max-width: 680px;
+        margin: 0 auto;
+      }
+
+      /* ── Values ── */
+      .dn-values {
+        background: #03010e;
+        padding: 120px 0;
+      }
+      .dn-values__header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .dn-values__grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 24px;
+      }
+      @media (max-width:1023px) { .dn-values__grid { grid-template-columns: repeat(2,1fr); } }
+      @media (max-width:599px)  { .dn-values__grid { grid-template-columns: 1fr; } }
+
+      .dn-value-card {
+        background: linear-gradient(145deg,rgba(255,255,255,0.055) 0%,rgba(255,255,255,0.02) 100%);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 20px;
+        padding: 40px 28px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+      }
+      .dn-value-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg,transparent,var(--cc,#7c05e2),transparent);
+        opacity: 0;
+        transition: opacity 0.28s ease;
+      }
+      .dn-value-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.15); box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+      .dn-value-card:hover::before { opacity: 1; }
+
+      .dn-value-card__icon {
+        width: 50px; height: 50px;
+        border-radius: 14px;
+        display: flex; align-items: center; justify-content: center;
+        margin-bottom: 20px;
+        background: var(--cbg,rgba(124,5,226,0.14));
+      }
+      .dn-value-card__icon svg { width: 24px; height: 24px; }
+      .dn-value-card__title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing:-0.01em; }
+      .dn-value-card__text  { font-size: 14px; line-height: 1.68; color: rgba(255,255,255,0.58); }
+
+      /* ── Stats ── */
+      .dn-stats {
+        background: linear-gradient(135deg,#0d0720 0%,#080318 50%,#030218 100%);
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .dn-stats::after {
+        content: '';
+        position: absolute; inset: 0;
+        background: url('/img/preloader/stars.png') center/600px repeat;
+        opacity: 0.12;
+        pointer-events: none;
+      }
+      .dn-stats__grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        position: relative; z-index: 2;
+      }
+      @media (max-width:767px) { .dn-stats__grid { grid-template-columns: repeat(2,1fr); } }
+
+      .dn-stat {
+        text-align: center;
+        padding: 48px 24px;
+        border-right: 1px solid rgba(255,255,255,0.07);
+      }
+      .dn-stat:last-child { border-right: none; }
+      @media (max-width:767px) {
+        .dn-stat:nth-child(2) { border-right: none; }
+        .dn-stat { border-bottom: 1px solid rgba(255,255,255,0.07); }
+      }
+      .dn-stat__number {
+        font-size: clamp(40px,5vw,64px);
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        line-height: 1;
+        background: linear-gradient(135deg,#fff 0%,#00ffd4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+        font-family: "montserrat","hkgrotesk","Arial",sans-serif;
+      }
+      .dn-stat__label { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.5); letter-spacing: 0.02em; }
+
+      /* ── Process ── */
+      .dn-process { background: #03010e; padding: 120px 0; }
+      .dn-process__header { text-align: center; margin-bottom: 72px; }
+      .dn-process__steps {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 32px;
+        position: relative;
+      }
+      @media (max-width:1023px) { .dn-process__steps { grid-template-columns: 1fr; } }
+
+      .dn-process__connector {
+        position: absolute;
+        top: 28px;
+        left: calc(16.66% + 28px); right: calc(16.66% + 28px);
+        height: 1px;
+        background: linear-gradient(90deg,#7c05e2,#00a0f6);
+        opacity: 0.35;
+        z-index: 0;
+      }
+      @media (max-width:1023px) { .dn-process__connector { display: none; } }
+
+      .dn-step {
+        position: relative; z-index: 1;
+        text-align: center;
+        padding: 40px 28px;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 20px;
+        transition: border-color 0.28s ease, transform 0.28s ease;
+      }
+      .dn-step:hover { border-color: rgba(124,5,226,0.3); transform: translateY(-4px); }
+      .dn-step__number {
+        width: 54px; height: 54px;
+        border-radius: 50%;
+        background: linear-gradient(135deg,#7c05e2,#ea2866);
+        color: #fff; font-size: 19px; font-weight: 800;
+        display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 20px;
+        box-shadow: 0 8px 24px rgba(124,5,226,0.4);
+        font-family: "montserrat","hkgrotesk","Arial",sans-serif;
+      }
+      .dn-step__title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: -0.01em; }
+      .dn-step__text  { font-size: 14px; line-height: 1.68; color: rgba(255,255,255,0.56); }
+
+      /* ── Team ── */
+      .dn-team {
+        background: linear-gradient(180deg,#060220 0%,#03010e 100%);
+        padding: 120px 0;
+      }
+      .dn-team__layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      @media (max-width:1023px) { .dn-team__layout { grid-template-columns: 1fr; gap: 40px; } }
+
+      .dn-team__header { margin-bottom: 28px; }
+      .dn-team__text  { font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.68); margin-bottom: 16px; }
+
+      .dn-team__skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+      .dn-skill-tag {
+        padding: 6px 16px;
+        background: rgba(124,5,226,0.12);
+        border: 1px solid rgba(124,5,226,0.28);
+        border-radius: 20px;
+        font-size: 12px; font-weight: 600;
+        color: rgba(255,255,255,0.78);
+        letter-spacing: 0.02em;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+        cursor: default;
+      }
+      .dn-skill-tag:hover { background: rgba(124,5,226,0.25); border-color: rgba(124,5,226,0.5); color: #fff; }
+
+      .dn-team__visual {
+        height: 440px;
+        border-radius: 24px;
+        overflow: hidden;
+        background: linear-gradient(135deg,rgba(124,5,226,0.14) 0%,rgba(0,160,246,0.08) 100%);
+        border: 1px solid rgba(255,255,255,0.07);
+        display: flex; align-items: center; justify-content: center;
+      }
+      .dn-team__visual-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 14px; padding: 28px;
+        width: 100%; height: 100%;
+      }
+      .dn-team__visual-item {
+        background: rgba(255,255,255,0.045);
+        border: 1px solid rgba(255,255,255,0.09);
+        border-radius: 14px;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 8px;
+        font-size: 12px; font-weight: 600;
+        color: rgba(255,255,255,0.55);
+        transition: all 0.25s ease;
+        padding: 12px; text-align: center;
+        cursor: default;
+      }
+      .dn-team__visual-item:hover {
+        background: rgba(124,5,226,0.18);
+        border-color: rgba(124,5,226,0.35);
+        color: #fff;
+        transform: scale(1.03);
+      }
+      .dn-team__visual-item svg { width: 26px; height: 26px; opacity: 0.7; transition: opacity 0.2s; }
+      .dn-team__visual-item:hover svg { opacity: 1; }
+
+      /* Ascunde portalul original */
+      .say-hello-section__bg-image {
+        display: none !important;
+      }
+      /* GIF astronaut poziționat în secțiune */
+      .dn-say-hello-gif {
+        position: absolute;
+        right: 2%;
+        bottom: 0;
+        width: 580px;
+        height: auto;
+        pointer-events: none;
+        z-index: 2;
+      }
+      @media (max-width: 1023px) {
+        .dn-say-hello-gif { width: 340px; right: 0; }
+      }
+      @media (max-width: 599px) {
+        .dn-say-hello-gif { display: none; }
+      }
+    </style>
+
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "name": "Despre Atomics",
-        "url": "https://atomics.md/despre-noi",
-        "about": {
-          "@type": "Organization",
-          "name": "Atomics",
-          "url": "https://atomics.md",
-          "logo": "https://atomics.md/img/logo.png",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Chișinău",
-            "addressCountry": "MD"
-          }
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "Despre Atomics",
+      "url": "https://atomics.md/despre-noi",
+      "about": {
+        "@type": "Organization",
+        "name": "Atomics",
+        "url": "https://atomics.md",
+        "logo": "https://atomics.md/img/logo.png",
+        "foundingDate": "2019",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Str. Columna 170",
+          "addressLocality": "Chișinău",
+          "postalCode": "MD-2004",
+          "addressCountry": "MD"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+373-79-979-732",
+          "email": "hello@atomics.md",
+          "contactType": "customer service"
         }
       }
+    }
     </script>
-
-    <link rel="stylesheet" media="all" href="css/app.css" />
-    <!-- BEGIN favicons -->
-    <link
-      type="image/x-icon"
-      rel="shortcut icon"
-      href="img/favicons/favicon.ico"
-    />
-    <link
-      type="image/png"
-      sizes="16x16"
-      rel="icon"
-      href="img/favicons/favicon-16x16.png"
-    />
-    <link
-      type="image/png"
-      sizes="32x32"
-      rel="icon"
-      href="img/favicons/favicon-32x32.png"
-    />
-    <link
-      type="image/png"
-      sizes="96x96"
-      rel="icon"
-      href="img/favicons/favicon-96x96.png"
-    />
-    <link
-      type="image/png"
-      sizes="120x120"
-      rel="icon"
-      href="img/favicons/favicon-120x120.png"
-    />
-    <link
-      type="image/png"
-      sizes="192x192"
-      rel="icon"
-      href="img/favicons/android-icon-192x192.png"
-    />
-    <!-- END favicons -->
-
-    <!-- Google Tag Manager -->
-    <!-- End Google Tag Manager -->
   </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
 
-    <!-- BEGIN content -->
+  <body>
     <div class="out" data-barba="wrapper">
+
+      <!-- Preloader -->
       <div class="preloader js-preloader">
-        <!-- <div class="stars-bg">
-    <div class='stars-bg__stars'></div>
-    <div class='stars-bg__stars2'></div>
-    <div class='stars-bg__stars3'></div>
-  </div> -->
         <div class="stars-twinkling__stars"></div>
-        <!-- <div class="stars-twinkling__twinkling"></div> -->
         <div class="preloader__loader img-wrapper img-wrapper_contain">
-          <script data-pagespeed-no-defer>
-            //<![CDATA[
-            (function () {
-              for (
-                var g =
-                    "function" == typeof Object.defineProperties
-                      ? Object.defineProperty
-                      : function (b, c, a) {
-                          if (a.get || a.set)
-                            throw new TypeError(
-                              "ES3 does not support getters and setters."
-                            );
-                          b != Array.prototype &&
-                            b != Object.prototype &&
-                            (b[c] = a.value);
-                        },
-                  h =
-                    "undefined" != typeof window && window === this
-                      ? this
-                      : "undefined" != typeof global && null != global
-                      ? global
-                      : this,
-                  k = ["String", "prototype", "repeat"],
-                  l = 0;
-                l < k.length - 1;
-                l++
-              ) {
-                var m = k[l];
-                m in h || (h[m] = {});
-                h = h[m];
-              }
-              var n = k[k.length - 1],
-                p = h[n],
-                q = p
-                  ? p
-                  : function (b) {
-                      var c;
-                      if (null == this)
-                        throw new TypeError(
-                          "The 'this' value for String.prototype.repeat must not be null or undefined"
-                        );
-                      c = this + "";
-                      if (0 > b || 1342177279 < b)
-                        throw new RangeError("Invalid count value");
-                      b |= 0;
-                      for (var a = ""; b; )
-                        if ((b & 1 && (a += c), (b >>>= 1))) c += c;
-                      return a;
-                    };
-              q != p &&
-                null != q &&
-                g(h, n, { configurable: !0, writable: !0, value: q });
-              var t = this;
-              function u(b, c) {
-                var a = b.split("."),
-                  d = t;
-                a[0] in d || !d.execScript || d.execScript("var " + a[0]);
-                for (var e; a.length && (e = a.shift()); )
-                  a.length || void 0 === c
-                    ? d[e]
-                      ? (d = d[e])
-                      : (d = d[e] = {})
-                    : (d[e] = c);
-              }
-              function v(b) {
-                var c = b.length;
-                if (0 < c) {
-                  for (var a = Array(c), d = 0; d < c; d++) a[d] = b[d];
-                  return a;
-                }
-                return [];
-              }
-              function w(b) {
-                var c = window;
-                if (c.addEventListener) c.addEventListener("load", b, !1);
-                else if (c.attachEvent) c.attachEvent("onload", b);
-                else {
-                  var a = c.onload;
-                  c.onload = function () {
-                    b.call(this);
-                    a && a.call(this);
-                  };
-                }
-              }
-              var x;
-              function y(b, c, a, d, e) {
-                this.h = b;
-                this.j = c;
-                this.l = a;
-                this.f = e;
-                this.g = {
-                  height:
-                    window.innerHeight ||
-                    document.documentElement.clientHeight ||
-                    document.body.clientHeight,
-                  width:
-                    window.innerWidth ||
-                    document.documentElement.clientWidth ||
-                    document.body.clientWidth,
-                };
-                this.i = d;
-                this.b = {};
-                this.a = [];
-                this.c = {};
-              }
-              function z(b, c) {
-                var a,
-                  d,
-                  e = c.getAttribute("data-pagespeed-url-hash");
-                if ((a = e && !(e in b.c)))
-                  if (0 >= c.offsetWidth && 0 >= c.offsetHeight) a = !1;
-                  else {
-                    d = c.getBoundingClientRect();
-                    var f = document.body;
-                    a =
-                      d.top +
-                      ("pageYOffset" in window
-                        ? window.pageYOffset
-                        : (document.documentElement || f.parentNode || f)
-                            .scrollTop);
-                    d =
-                      d.left +
-                      ("pageXOffset" in window
-                        ? window.pageXOffset
-                        : (document.documentElement || f.parentNode || f)
-                            .scrollLeft);
-                    f = a.toString() + "," + d;
-                    b.b.hasOwnProperty(f)
-                      ? (a = !1)
-                      : ((b.b[f] = !0),
-                        (a = a <= b.g.height && d <= b.g.width));
-                  }
-                a && (b.a.push(e), (b.c[e] = !0));
-              }
-              y.prototype.checkImageForCriticality = function (b) {
-                b.getBoundingClientRect && z(this, b);
-              };
-              u(
-                "pagespeed.CriticalImages.checkImageForCriticality",
-                function (b) {
-                  x.checkImageForCriticality(b);
-                }
-              );
-              u("pagespeed.CriticalImages.checkCriticalImages", function () {
-                A(x);
-              });
-              function A(b) {
-                b.b = {};
-                for (var c = ["IMG", "INPUT"], a = [], d = 0; d < c.length; ++d)
-                  a = a.concat(v(document.getElementsByTagName(c[d])));
-                if (a.length && a[0].getBoundingClientRect) {
-                  for (d = 0; (c = a[d]); ++d) z(b, c);
-                  a = "oh=" + b.l;
-                  b.f && (a += "&n=" + b.f);
-                  if ((c = !!b.a.length))
-                    for (
-                      a += "&ci=" + encodeURIComponent(b.a[0]), d = 1;
-                      d < b.a.length;
-                      ++d
-                    ) {
-                      var e = "," + encodeURIComponent(b.a[d]);
-                      131072 >= a.length + e.length && (a += e);
-                    }
-                  b.i &&
-                    ((e = "&rd=" + encodeURIComponent(JSON.stringify(B()))),
-                    131072 >= a.length + e.length && (a += e),
-                    (c = !0));
-                  C = a;
-                  if (c) {
-                    d = b.h;
-                    b = b.j;
-                    var f;
-                    if (window.XMLHttpRequest) f = new XMLHttpRequest();
-                    else if (window.ActiveXObject)
-                      try {
-                        f = new ActiveXObject("Msxml2.XMLHTTP");
-                      } catch (r) {
-                        try {
-                          f = new ActiveXObject("Microsoft.XMLHTTP");
-                        } catch (D) {}
-                      }
-                    f &&
-                      (f.open(
-                        "POST",
-                        d +
-                          (-1 == d.indexOf("?") ? "?" : "&") +
-                          "url=" +
-                          encodeURIComponent(b)
-                      ),
-                      f.setRequestHeader(
-                        "Content-Type",
-                        "application/x-www-form-urlencoded"
-                      ),
-                      f.send(a));
-                  }
-                }
-              }
-              function B() {
-                var b = {},
-                  c;
-                c = document.getElementsByTagName("IMG");
-                if (!c.length) return {};
-                var a = c[0];
-                if (!("naturalWidth" in a && "naturalHeight" in a)) return {};
-                for (var d = 0; (a = c[d]); ++d) {
-                  var e = a.getAttribute("data-pagespeed-url-hash");
-                  e &&
-                    ((!(e in b) &&
-                      0 < a.width &&
-                      0 < a.height &&
-                      0 < a.naturalWidth &&
-                      0 < a.naturalHeight) ||
-                      (e in b && a.width >= b[e].o && a.height >= b[e].m)) &&
-                    (b[e] = {
-                      rw: a.width,
-                      rh: a.height,
-                      ow: a.naturalWidth,
-                      oh: a.naturalHeight,
-                    });
-                }
-                return b;
-              }
-              var C = "";
-              u("pagespeed.CriticalImages.getBeaconData", function () {
-                return C;
-              });
-              u("pagespeed.CriticalImages.Run", function (b, c, a, d, e, f) {
-                var r = new y(b, c, a, e, f);
-                x = r;
-                d &&
-                  w(function () {
-                    window.setTimeout(function () {
-                      A(r);
-                    }, 0);
-                  });
-              });
-            })();
-            pagespeed.CriticalImages.Run(
-              "mod_pagespeed_beacon/index.htm",
-              "for-agencies/index.htm",
-              "8Xxa2XQLv9",
-              true,
-              false,
-              "BC8IjLpPL1o"
-            );
-            //]]>
-          </script>
-          <img
-            src="img/preloader/loader-3.png"
-            alt="preloader"
-            data-pagespeed-url-hash="3045130785"
-            onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-          />
+          <img src="img/preloader/loader-3.png" alt="preloader" />
         </div>
         <div class="preloader__logo img-wrapper img-wrapper_contain">
-          <img
-            src="img/preloader/logo.svg"
-            alt="DeveloPress logo"
-            data-pagespeed-url-hash="3954935870"
-            onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-          />
+          <img src="img/preloader/logo.svg" alt="Atomics logo" />
         </div>
-        <div class="preloader__progress">
-          <span class="js-progress">1</span>%
-        </div>
+        <div class="preloader__progress"><span class="js-progress">1</span>%</div>
       </div>
-      <div data-barba="container" data-barba-namespace="home">
-        <!-- BEGIN header -->
+
+      <div data-barba="container" data-barba-namespace="despre-noi">
+
+        <!-- Header -->
         <header class="header js-header">
-          <!-- BEGIN container -->
           <div class="container header__container">
-            <a href="index.htm" class="js-logo logo header__logo">
+            <a href="/index.htm" class="js-logo logo header__logo">
               <svg class="logo__svg" viewBox="0 0 250 40">
                 <defs>
-                  <linearGradient
-                    id="linear-gradient"
-                    x1="-1.06"
-                    y1="36"
-                    x2="28.99"
-                    y2="5.95"
-                    gradientUnits="userSpaceOnUse"
-                  >
+                  <linearGradient id="linear-gradient" x1="-1.06" y1="36" x2="28.99" y2="5.95" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stop-color="#fff" />
                     <stop offset="0.28" stop-color="#00ffd4" />
                     <stop offset="0.69" stop-color="#00cfe9" />
@@ -451,33 +422,15 @@
                   </linearGradient>
                 </defs>
                 <g class="logo__main-group">
-                  <image
-                    href="img/favicons/android-icon-192x192.png"
-                    x="0"
-                    y="0"
-                    width="42"
-                    height="42"
-                    class="logo__icon"
-                  />
-                  <text
-                    x="48"
-                    y="32"
-                    font-family="Arial, sans-serif"
-                    font-size="28"
-                    font-weight="bold"
-                    fill="#fff"
-                    class="logo__text"
-                  >
-                    Atomics
-                  </text>
+                  <image href="img/favicons/android-icon-192x192.png" x="0" y="0" width="42" height="42" class="logo__icon" />
+                  <text x="48" y="32" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" class="logo__text">Atomics</text>
                 </g>
               </svg>
             </a>
-            <!-- BEGIN nav -->
-            <nav class="nav header__nav js-nav">
+            <nav class="nav header__nav js-nav" id="main-nav" aria-label="Navigare principală">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a href="/for-agencies.html" class="nav__link">Despre noi</a>
+                  <a href="/despre-noi.html" class="nav__link is-active">Despre noi</a>
                 </li>
                 <li class="nav__item">
                   <a href="/solutions.html" class="nav__link">Servicii</a>
@@ -489,1667 +442,457 @@
                   <a href="/pricing.html" class="nav__link">Prețuri</a>
                 </li>
                 <li class="nav__item nav__item_btn">
-                  <div
-                    class="animation-btn animation-btn_size_small animation-btn_style_ nav__link"
-                  >
+                  <div class="animation-btn animation-btn_size_small animation-btn_style_ nav__link">
                     <span class="animation-btn__mask">Contacte</span>
-                    <a href="contact/index.htm" class="animation-btn__btn"
-                      >Contacte</a
-                    >
+                    <a href="/contact.html" class="animation-btn__btn">Contacte</a>
                   </div>
-                  <!-- <div class="animation-btn animation-btn_size_small nav__link">
-            <span class="animation-btn__mask">Contact</span>
-            <a href="contacts.html" class="animation-btn__btn">Contact</a>
-          </div> -->
-                  <!-- <a href="contacts.html" class="nav__link btn btn_size_small">Contact</a> -->
                 </li>
               </ul>
             </nav>
-            <!-- END nav -->
-            <button
-              class="mobile-hamburger js-mobile-hamburger header__mobile-hamburger"
-              type="button"
-            >
+            <button class="mobile-hamburger js-mobile-hamburger header__mobile-hamburger" type="button"
+              aria-label="Deschide meniul" aria-expanded="false" aria-controls="main-nav">
               <span class="mobile-hamburger__sp"></span>
               <span class="mobile-hamburger__sp"></span>
               <span class="mobile-hamburger__sp"></span>
             </button>
           </div>
-          <!-- END container -->
         </header>
-        <!-- END header -->
-        <!-- BEGIN clip-path -->
-        <svg style="position: absolute" width="0" height="0" viewBox="0 0 1 1">
+
+        <!-- Clip paths (required by JS) -->
+        <svg style="position:absolute" width="0" height="0" viewBox="0 0 1 1">
           <clipPath id="front-mask" clipPathUnits="objectBoundingBox">
-            <path
-              fill="white"
-              d="M0.104145 0C0.148423 0.317854 0.0603192 0.362626 0.0502138 0.582732C0.0291148 1.04229 0.255226 0.97927 0.302448 0.97927C0.416031 0.97927 0.553536 0.900587 0.664022 0.900587C0.774507 0.900587 0.921821 1.11249 0.921821 0.821124C0.921821 0.715172 0.872717 0.688685 0.884993 0.50327C0.891937 0.398384 0.909545 0.397319 0.921821 0.291368C0.934097 0.185416 0.909545 0.0264894 0.903769 0H0.104145Z"
-            />
+            <path fill="white" d="M0.104145 0C0.148423 0.317854 0.0603192 0.362626 0.0502138 0.582732C0.0291148 1.04229 0.255226 0.97927 0.302448 0.97927C0.416031 0.97927 0.553536 0.900587 0.664022 0.900587C0.774507 0.900587 0.921821 1.11249 0.921821 0.821124C0.921821 0.715172 0.872717 0.688685 0.884993 0.50327C0.891937 0.398384 0.909545 0.397319 0.921821 0.291368C0.934097 0.185416 0.909545 0.0264894 0.903769 0H0.104145Z"/>
           </clipPath>
         </svg>
-        <svg
-          style="position: absolute"
-          width="0"
-          height="0"
-          viewBox="0 0 1 1"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg style="position:absolute" width="0" height="0" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
           <clipPath id="say-hello-mask" clipPathUnits="objectBoundingBox">
-            <path
-              fill="white"
-              d="M0.504024 0.0112428C0.434202 0.0350714 0.273096 0.185109 0.195216 0.172842C0.163669 0.167872 0.0935776 0.147558 0.0655802 0.106055C0.0305836 0.0541768 0.00741668 0.0810106 0.00199466 0.157934C-0.00342736 0.234857 -0.00293445 0.358293 0.0724809 0.605163C0.147896 0.852034 0.304888 0.961157 0.444875 0.992762C0.840413 1.08206 0.882803 0.314762 0.960213 0.360082C1.01269 0.390801 1.00433 0.298066 0.985598 0.281369C0.966868 0.264673 0.929899 0.221739 0.822938 0.314762C0.715976 0.407786 0.692563 0.271828 0.654609 0.122752C0.616654 -0.0263245 0.550335 -0.00456175 0.504024 0.0112428Z"
-            />
+            <path fill="white" d="M0.504024 0.0112428C0.434202 0.0350714 0.273096 0.185109 0.195216 0.172842C0.163669 0.167872 0.0935776 0.147558 0.0655802 0.106055C0.0305836 0.0541768 0.00741668 0.0810106 0.00199466 0.157934C-0.00342736 0.234857 -0.00293445 0.358293 0.0724809 0.605163C0.147896 0.852034 0.304888 0.961157 0.444875 0.992762C0.840413 1.08206 0.882803 0.314762 0.960213 0.360082C1.01269 0.390801 1.00433 0.298066 0.985598 0.281369C0.966868 0.264673 0.929899 0.221739 0.822938 0.314762C0.715976 0.407786 0.692563 0.271828 0.654609 0.122752C0.616654 -0.0263245 0.550335 -0.00456175 0.504024 0.0112428Z"/>
           </clipPath>
         </svg>
-        <!-- END clip-path -->
-        <!-- BEGIN main -->
-        <main class="main js-main page-for-agencies" data-scroll-container>
-          <!-- BEGIN main-canvas -->
+
+        <!-- Main -->
+        <main class="main js-main front-page" data-scroll-container>
           <div class="main-canvas js-main-canvas"></div>
-          <!-- END main-canvas -->
-          <!-- BEGIN first-section-pricing -->
+
+          <!-- ═══════════════════════════════════════════
+               1. HERO – Cine suntem
+          ═══════════════════════════════════════════ -->
           <section class="first-section-pricing" data-scroll-section>
-            <!-- BEGIN container -->
             <div class="container first-section-pricing__container">
-              <!-- BEGIN text-block -->
+
               <div class="first-section-pricing__text-block">
-                <h1
-                  class="first-section-pricing__section-title section-title section-title_small js-text-anim"
-                >
-                  <strong>
-                    Cine suntem și de ce facem lucrurile diferit <br />
-                  </strong>
+                <div class="dn-badge">Agenție digitală — Chișinău, Moldova</div>
+                <h1 class="first-section-pricing__section-title section-title section-title_small js-text-anim">
+                  <strong>Cine suntem<br />și de ce contează</strong>
                 </h1>
+                <p class="text" style="color:rgba(255,255,255,0.72);margin-top:24px;max-width:480px;line-height:1.78;">
+                  Suntem Atomics — o echipă de designeri, dezvoltatori și strategi digitali din Chișinău.
+                  Nu facem site-uri. <strong>Construim instrumente de creștere</strong> pentru afaceri care vor mai mult decât o prezență online.
+                </p>
+                <div class="animation-btn animation-btn_size_big animation-btn_style_" style="margin-top:40px;">
+                  <span class="animation-btn__mask">Hai să vorbim</span>
+                  <a href="/contact.html" class="animation-btn__btn">Hai să vorbim</a>
+                </div>
               </div>
-              <!-- END text-block -->
-              <!-- BEGIN img-block -->
+
               <div class="first-section-pricing__img-block">
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__board sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.6"
-                  data-mouse-speed-y="0.6"
-                  data-hovering-amplitude-y="7"
-                  data-z-index="350"
-                  data-scroll-speed="0"
-                  data-is-animation
-                  data-animation-from-x="-30"
-                  data-animation-from-y="-100"
-                  data-animation-duration="2"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInDown"
-                    src="img/page-solutions/board-2.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3552832422"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
+                <div class="js-scrollable-img-wrapper img-wrapper page-for-agencies__board sprite"
+                  data-group="0" data-mouse-speed-x="0.6" data-mouse-speed-y="0.6"
+                  data-hovering-amplitude-y="7" data-z-index="350" data-scroll-speed="0"
+                  data-is-animation data-animation-from-x="-30" data-animation-from-y="-100" data-animation-duration="2">
+                  <img class="wow animate__animated animate__fadeInDown" src="img/page-solutions/board-2.svg" alt="Tablou de proiect Atomics" />
                 </div>
-
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__man sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.3"
-                  data-mouse-speed-y="0.3"
-                  data-hovering-amplitude-y="3"
-                  data-hovering-offset="3"
-                  data-z-index="360"
-                  data-scroll-speed="0"
-                  data-scroll-speed-x="0.025"
-                  data-is-animation
-                  data-animation-from-x="-70"
-                  data-animation-from-y="-100"
-                  data-animation-duration="1.7"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInLeft"
-                    src="img/page-solutions/man-1.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3179549977"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
+                <div class="js-scrollable-img-wrapper img-wrapper page-for-agencies__man sprite"
+                  data-group="0" data-mouse-speed-x="0.3" data-mouse-speed-y="0.3"
+                  data-hovering-amplitude-y="3" data-hovering-offset="3" data-z-index="360" data-scroll-speed="0"
+                  data-is-animation data-animation-from-x="-70" data-animation-from-y="-100" data-animation-duration="1.7">
+                  <img class="wow animate__animated animate__fadeInLeft" src="img/page-solutions/man-1.svg" alt="" />
                 </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__woman sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.4"
-                  data-mouse-speed-y="0.4"
-                  data-hovering-amplitude-y="4"
-                  data-hovering-offset="8"
-                  data-z-index="360"
-                  data-scroll-speed="0"
-                  data-scroll-speed-x="-0.025"
-                  data-is-animation
-                  data-animation-from-x="130"
-                  data-animation-from-y="20"
-                  data-animation-duration="1.9"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInRight"
-                    src="img/page-solutions/woman-2.svg"
-                    alt=""
-                    data-pagespeed-url-hash="2436615118"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
+                <div class="js-scrollable-img-wrapper img-wrapper page-for-agencies__woman sprite"
+                  data-group="0" data-mouse-speed-x="0.4" data-mouse-speed-y="0.4"
+                  data-hovering-amplitude-y="4" data-hovering-offset="8" data-z-index="360" data-scroll-speed="0"
+                  data-is-animation data-animation-from-x="130" data-animation-from-y="20" data-animation-duration="1.9">
+                  <img class="wow animate__animated animate__fadeInRight" src="img/page-solutions/woman-2.svg" alt="" />
                 </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__icon-1 sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.5"
-                  data-mouse-speed-y="0.5"
-                  data-hovering-amplitude-y="7"
-                  data-hovering-offset="12"
-                  data-z-index="350"
-                  data-scroll-speed="0.03"
-                  data-scroll-speed-x="0.03"
-                  data-is-animation
-                  data-animation-from-x="-50"
-                  data-animation-from-y="30"
-                  data-animation-duration="1.3"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInUp"
-                    src="img/page-solutions/icon-5.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3115140674"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
+                <div class="js-scrollable-img-wrapper img-wrapper page-for-agencies__icon-1 sprite"
+                  data-group="0" data-mouse-speed-x="0.5" data-mouse-speed-y="0.5"
+                  data-hovering-amplitude-y="7" data-hovering-offset="12" data-z-index="350"
+                  data-scroll-speed="0.03" data-is-animation data-animation-from-x="-50" data-animation-from-y="30" data-animation-duration="1.3">
+                  <img class="wow animate__animated animate__fadeInUp" src="img/page-solutions/icon-5.svg" alt="" />
                 </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__icon-2 sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.6"
-                  data-mouse-speed-y="0.6"
-                  data-hovering-amplitude-y="5"
-                  data-hovering-offset="14"
-                  data-z-index="350"
-                  data-scroll-speed="-0.05"
-                  data-scroll-speed-x="0.05"
-                  data-is-animation
-                  data-animation-from-x="40"
-                  data-animation-from-y="-60"
-                  data-animation-duration="1.7"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInRight"
-                    src="img/page-solutions/icon-6.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3409640595"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
+                <div class="js-scrollable-img-wrapper img-wrapper page-for-agencies__icon-2 sprite"
+                  data-group="0" data-mouse-speed-x="0.6" data-mouse-speed-y="0.6"
+                  data-hovering-amplitude-y="5" data-hovering-offset="14" data-z-index="350"
+                  data-scroll-speed="-0.05" data-is-animation data-animation-from-x="40" data-animation-from-y="-60" data-animation-duration="1.7">
+                  <img class="wow animate__animated animate__fadeInRight" src="img/page-solutions/icon-6.svg" alt="" />
                 </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__icon-3 sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.7"
-                  data-mouse-speed-y="0.7"
-                  data-hovering-amplitude-y="9"
-                  data-hovering-offset="16"
-                  data-rotation-speed="0.3"
-                  data-z-index="350"
-                  data-scroll-speed="0.05"
-                  data-scroll-speed-x="0.05"
-                  data-is-animation
-                  data-animation-from-x="-50"
-                  data-animation-from-y="70"
-                  data-animation-duration="1.5"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInUp"
-                    src="img/page-solutions/icon-7.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3704140516"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
+                <div class="js-scrollable-img-wrapper img-wrapper page-for-agencies__bubble-1 sprite"
+                  data-group="0" data-mouse-speed-x="0.5" data-mouse-speed-y="0.5"
+                  data-hovering-amplitude-y="7" data-hovering-offset="11" data-z-index="350"
+                  data-scroll-speed="0.04" data-is-animation data-animation-from-x="90" data-animation-from-y="30" data-animation-duration="1.4">
+                  <img class="wow animate__animated animate__fadeInLeft" src="img/page-solutions/bubble-1.svg" alt="" />
                 </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__bubble-1 sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.5"
-                  data-mouse-speed-y="0.5"
-                  data-hovering-amplitude-y="7"
-                  data-hovering-offset="11"
-                  data-z-index="350"
-                  data-scroll-speed="0.04"
-                  data-scroll-speed-x="0.04"
-                  data-is-animation
-                  data-animation-from-x="90"
-                  data-animation-from-y="30"
-                  data-animation-duration="1.4"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInLeft"
-                    src="img/page-solutions/bubble-1.svg"
-                    alt=""
-                    data-pagespeed-url-hash="2366862577"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
+                <div class="js-scrollable-img-wrapper img-wrapper page-for-agencies__chart sprite"
+                  data-group="0" data-mouse-speed-x="0.8" data-mouse-speed-y="0.8"
+                  data-hovering-amplitude-y="5" data-hovering-offset="5" data-z-index="350"
+                  data-scroll-speed="-0.03" data-is-animation data-animation-from-x="50" data-animation-from-y="-80" data-animation-duration="2">
+                  <img class="wow animate__animated animate__fadeInDown" src="img/page-solutions/chart-1.svg" alt="" />
                 </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__bubble-2 sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.6"
-                  data-mouse-speed-y="0.6"
-                  data-hovering-amplitude-y="3"
-                  data-hovering-offset="3"
-                  data-z-index="350"
-                  data-scroll-speed="-0.03"
-                  data-scroll-speed-x="0.02"
-                  data-is-animation
-                  data-animation-from-x="-130"
-                  data-animation-from-y="70"
-                  data-animation-duration="1.7"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInDown"
-                    src="img/page-solutions/bubble-2.svg"
-                    alt=""
-                    data-pagespeed-url-hash="2661362498"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__chart sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.8"
-                  data-mouse-speed-y="0.8"
-                  data-hovering-amplitude-y="5"
-                  data-hovering-offset="5"
-                  data-z-index="350"
-                  data-scroll-speed="-0.03"
-                  data-scroll-speed-x="0.06"
-                  data-is-animation
-                  data-animation-from-x="50"
-                  data-animation-from-y="-80"
-                  data-animation-duration="2"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInDown"
-                    src="img/page-solutions/chart-1.svg"
-                    alt=""
-                    data-pagespeed-url-hash="2840993497"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__coin sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.5"
-                  data-mouse-speed-y="0.5"
-                  data-hovering-amplitude-y="4"
-                  data-hovering-offset="6"
-                  data-z-index="350"
-                  data-scroll-speed="-0.03"
-                  data-scroll-speed-x="-0.05"
-                  data-is-animation
-                  data-animation-from-x="-70"
-                  data-animation-from-y="-80"
-                  data-animation-duration="1.7"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInLeft"
-                    src="img/page-solutions/coin.svg"
-                    alt=""
-                    data-pagespeed-url-hash="1785312958"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper page-for-agencies__icon-4 sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.7"
-                  data-mouse-speed-y="0.7"
-                  data-hovering-amplitude-y="5"
-                  data-hovering-offset="5"
-                  data-z-index="350"
-                  data-scroll-speed="0.05"
-                  data-scroll-speed-x="-0.09"
-                  data-is-animation
-                  data-animation-from-x="80"
-                  data-animation-from-y="60"
-                  data-animation-duration="1.9"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInLeft"
-                    src="img/page-solutions/icon-8.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3998640437"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper page-for-agencies__platform img-wrapper sprite"
-                  data-group="0"
-                  data-mouse-speed-x="0.3"
-                  data-mouse-speed-y="0.3"
-                  data-scroll-speed="0"
-                  data-hovering-amplitude-y="0"
-                  data-z-index="50"
-                  data-hovering-speed="0"
-                  data-is-animation
-                  data-animation-from-y="80"
-                  data-animation-duration="1.5"
-                >
-                  <img
-                    src="img/page-solutions/platform.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3093907932"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
+                <div class="js-scrollable-img-wrapper page-for-agencies__platform img-wrapper sprite"
+                  data-group="0" data-mouse-speed-x="0.3" data-mouse-speed-y="0.3"
+                  data-scroll-speed="0" data-z-index="50"
+                  data-is-animation data-animation-from-y="80" data-animation-duration="1.5">
+                  <img src="img/page-solutions/platform.svg" alt="" />
                 </div>
               </div>
-              <!-- END img-block -->
             </div>
-            <!-- END container -->
-            <div
-              class="js-scrollable-img-wrapper first-section-pricing__mask img-wrapper sprite"
-              data-group="0"
-              data-mask-id="first-section-pricing-mask"
-              data-mouse-speed-x="0"
-              data-mouse-speed-y="0"
-              data-scroll-speed="0"
-            >
-              <img
-                src="img/page-pricing/mask-1.svg"
-                alt=""
-                data-pagespeed-url-hash="238601557"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
+
+            <div class="js-scrollable-img-wrapper first-section-pricing__mask img-wrapper sprite"
+              data-group="0" data-mask-id="first-section-pricing-mask"
+              data-mouse-speed-x="0" data-mouse-speed-y="0" data-scroll-speed="0">
+              <img src="img/page-pricing/mask-1.svg" alt="" />
             </div>
-            <div
-              class="js-scrollable-img-wrapper first-section-pricing__bg img-wrapper sprite"
-              data-group="0"
-              data-mask-by="first-section-pricing-mask"
-              data-mouse-speed-x="0"
-              data-mouse-speed-y="0"
-              data-scroll-speed="0.5"
-            >
+            <div class="js-scrollable-img-wrapper first-section-pricing__bg img-wrapper sprite"
+              data-group="0" data-mask-by="first-section-pricing-mask"
+              data-mouse-speed-x="0" data-mouse-speed-y="0" data-scroll-speed="0.5">
               <picture>
-                <source
-                  srcset="./img/page-pricing/bg-1-mobile.png"
-                  media="(max-width: 768px), (max-width: 1024px) and (orientation: portrait)"
-                />
+                <source srcset="./img/page-pricing/bg-1-mobile.png" media="(max-width:768px),(max-width:1024px) and (orientation:portrait)" />
                 <source srcset="./img/page-pricing/bg.jpeg" />
-                <img
-                  src="img/page-pricing/bg.jpeg"
-                  alt=""
-                  data-pagespeed-url-hash="753226290"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
+                <img src="img/page-pricing/bg.jpeg" alt="" />
               </picture>
             </div>
-            <div
-              class="js-scrollable-img-wrapper first-section-pricing__rock-1 img-wrapper sprite"
-              data-group="0"
-              data-mask-by="first-section-pricing-mask"
-              data-mouse-speed-x="0.5"
-              data-mouse-speed-y="0.5"
-              data-scroll-speed="0.35"
-              data-is-animation
-              data-animation-from-x="-30"
-              data-animation-from-y="-170"
-              data-animation-duration="1.8"
-            >
-              <img
-                src="img/page-pricing/rock_01.png"
-                alt=""
-                data-pagespeed-url-hash="3366137607"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
+            <div class="js-scrollable-img-wrapper first-section-pricing__rock-1 img-wrapper sprite"
+              data-group="0" data-mask-by="first-section-pricing-mask"
+              data-mouse-speed-x="0.5" data-mouse-speed-y="0.5" data-scroll-speed="0.35"
+              data-is-animation data-animation-from-x="-30" data-animation-from-y="-170" data-animation-duration="1.8">
+              <img src="img/page-pricing/rock_01.png" alt="" />
             </div>
-            <div
-              class="js-scrollable-img-wrapper first-section-pricing__rock-2 img-wrapper sprite"
-              data-group="0"
-              data-mask-by="first-section-pricing-mask"
-              data-mouse-speed-x="0.3"
-              data-mouse-speed-y="0.3"
-              data-scroll-speed="0.3"
-              data-scroll-speed-x="0.05"
-              data-is-animation
-              data-animation-from-x="-20"
-              data-animation-from-y="-170"
-              data-animation-duration="1.5"
-            >
-              <img
-                src="img/page-pricing/rock_02.png"
-                alt=""
-                data-pagespeed-url-hash="3660637528"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
-            </div>
-            <div
-              class="js-scrollable-img-wrapper first-section-pricing__rock-3 img-wrapper sprite"
-              data-group="0"
-              data-mask-by="first-section-pricing-mask"
-              data-mouse-speed-x="0.3"
-              data-mouse-speed-y="0.3"
-              data-scroll-speed="0.2"
-              data-scroll-speed-x="0.08"
-              data-is-animation
-              data-animation-from-x="20"
-              data-animation-from-y="-170"
-              data-animation-duration="1.9"
-            >
-              <img
-                src="img/page-pricing/rock_03.png"
-                alt=""
-                data-pagespeed-url-hash="3955137449"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
-            </div>
-            <div
-              class="js-scrollable-img-wrapper first-section-pricing__rock-4 img-wrapper sprite"
-              data-group="0"
-              data-mask-by="first-section-pricing-mask"
-              data-mouse-speed-x="0.4"
-              data-mouse-speed-y="0.4"
-              data-scroll-speed="0.3"
-              data-scroll-speed-x="0.07"
-              data-is-animation
-              data-animation-from-x="-40"
-              data-animation-from-y="-170"
-              data-animation-duration="1.3"
-            >
-              <img
-                src="img/page-pricing/rock_04.png"
-                alt=""
-                data-pagespeed-url-hash="4249637370"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
-            </div>
-            <div
-              class="js-scrollable-img-wrapper first-section-pricing__rock-5 img-wrapper sprite"
-              data-group="0"
-              data-mask-by="first-section-pricing-mask"
-              data-mouse-speed-x="0.4"
-              data-mouse-speed-y="0.4"
-              data-scroll-speed="0.3"
-              data-scroll-speed-x="0.03"
-              data-is-animation
-              data-animation-from-x="10"
-              data-animation-from-y="-170"
-              data-animation-duration="1.2"
-            >
-              <img
-                src="img/page-pricing/rock_05.png"
-                alt=""
-                data-pagespeed-url-hash="249169995"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
+            <div class="js-scrollable-img-wrapper first-section-pricing__rock-2 img-wrapper sprite"
+              data-group="0" data-mask-by="first-section-pricing-mask"
+              data-mouse-speed-x="0.3" data-mouse-speed-y="0.3" data-scroll-speed="0.3"
+              data-is-animation data-animation-from-x="-20" data-animation-from-y="-170" data-animation-duration="1.5">
+              <img src="img/page-pricing/rock_02.png" alt="" />
             </div>
           </section>
-          <!-- END first-section-pricing -->
-          <!-- BEGIN price-section-pricing -->
-          <section class="main-section-for-agencies" data-scroll-section>
-            <div class="container main-section-for-agencies__container">
-              <!-- BEGIN main-section-for-agencies__content-wrapper -->
-              <div class="main-section-for-agencies__content-wrapper">
-                <!-- BEGIN main-section-for-agencies__gif-block -->
-                <div class="main-section-for-agencies__gif-block">
-                  <img
-                    class="main-section-for-agencies__gif"
-                    src="img/page-for-agencies/despre.gif"
-                    alt="Despre Atomics"
-                    data-pagespeed-url-hash=""
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <!-- END main-section-for-agencies__gif-block -->
-                <!-- BEGIN main-section-for-agencies__text-block -->
 
-                <div class="main-section-for-agencies__text-block">
-                  <h5 class="main-section-for-agencies__title">
-                    La Atomics, nu privim digitalizarea ca pe o destinație, ci
-                    ca pe o călătorie infinită spre excelență. Suntem aici să
-                    fim motorul care te propulsează spre stele
-                  </h5>
-                  <p class="text main-section-for-agencies__text">
-                    <mark>La Atomics,</mark>
-                    digitalizarea nu este un obiectiv final, ci un proces
-                    continuu de optimizare și evoluție. Construim soluții
-                    digitale care ajută afacerile să funcționeze mai eficient,
-                    mai rapid și mai inteligent. Atomics este mai mult decât o
-                    agenție de dezvoltare. Suntem un hub de inovație unde
-                    tehnologia, automatizarea și strategia digitală se întâlnesc
-                    pentru a genera rezultate reale. Am luat naștere din dorința
-                    de a elimina barierele tehnice care încetinesc creșterea
-                    afacerilor și de a transforma procesele complexe în sisteme
-                    digitale clare și scalabile. Lucrăm cu antreprenori și
-                    companii care își doresc mai mult decât o simplă prezență
-                    online: își doresc performanță, control și creștere
-                    sustenabilă.
-                  </p>
+          <!-- ═══════════════════════════════════════════
+               2. MISIUNEA NOASTRĂ
+          ═══════════════════════════════════════════ -->
+          <section class="dn-mission" data-scroll-section>
+            <div class="container">
+              <div class="dn-mission__inner">
+                <span class="dn-mission__overline">Misiunea noastră</span>
+                <h2 class="dn-mission__quote js-text-anim">
+                  Transformăm ideile în <em>sisteme digitale</em> care generează creștere reală
+                </h2>
+                <p class="dn-mission__text">
+                  Nu suntem o fabrică de site-uri. Suntem parteneri strategici care înțeleg că digitalul bine făcut înseamnă mai mulți clienți, procese mai eficiente și un brand care inspiră încredere. Fiecare proiect pornește de la un obiectiv clar și se termină cu rezultate măsurabile.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════
+               3. VALORI
+          ═══════════════════════════════════════════ -->
+          <section class="dn-values" data-scroll-section>
+            <div class="container">
+              <div class="dn-values__header">
+                <span class="dn-overline">Ce ne ghidează</span>
+                <h2 class="section-title section-title_small js-text-anim">
+                  <strong>Valorile care stau la baza<br />fiecărui proiect</strong>
+                </h2>
+              </div>
+              <div class="dn-values__grid">
+
+                <div class="dn-value-card" style="--cc:#00c694;--cbg:rgba(0,198,148,0.12);">
+                  <div class="dn-value-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#00c694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <h3 class="dn-value-card__title">Transparență totală</h3>
+                  <p class="dn-value-card__text">Știi exact ce se construiește, când și de ce. Fără surprize, fără costuri ascunse. Raportăm progresul în timp real.</p>
                 </div>
 
-                <!-- END main-section-for-agencies__text-block -->
+                <div class="dn-value-card" style="--cc:#7c05e2;--cbg:rgba(124,5,226,0.12);">
+                  <div class="dn-value-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#7c05e2" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#7c05e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <h3 class="dn-value-card__title">Calitate fără compromis</h3>
+                  <p class="dn-value-card__text">Fiecare linie de cod, fiecare pixel și fiecare cuvânt sunt revizuite până când ating standardul pe care îl merită brandul tău.</p>
+                </div>
+
+                <div class="dn-value-card" style="--cc:#00a0f6;--cbg:rgba(0,160,246,0.12);">
+                  <div class="dn-value-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#00a0f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <h3 class="dn-value-card__title">Inovație practică</h3>
+                  <p class="dn-value-card__text">Integrăm AI, automatizare și tehnologii moderne acolo unde adaugă valoare reală — nu de dragul noutății, ci al eficienței.</p>
+                </div>
+
+                <div class="dn-value-card" style="--cc:#ea2866;--cbg:rgba(234,40,102,0.12);">
+                  <div class="dn-value-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#ea2866" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#ea2866" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#ea2866" stroke-width="2" stroke-linecap="round"/></svg>
+                  </div>
+                  <h3 class="dn-value-card__title">Parteneriat pe termen lung</h3>
+                  <p class="dn-value-card__text">Nu dispărem după livrare. Rămânem alături cu suport, optimizare continuă și strategii de creștere adaptate în timp.</p>
+                </div>
+
               </div>
-              <!-- END main-section-for-agencies__content-wrapper -->
-              <!-- BEGIN main-section-for-agencies__img-block -->
-              <div class="main-section-for-agencies__img-block">
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__board sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.4"
-                  data-mouse-speed-y="0.4"
-                  data-hovering-amplitude-y="7"
-                  data-z-index="50"
-                  data-scroll-speed="0"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInUp"
-                    src="img/page-solutions/board-3.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3847332343"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__bubble sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.5"
-                  data-mouse-speed-y="0.5"
-                  data-hovering-amplitude-y="4"
-                  data-hovering-offset="4"
-                  data-z-index="50"
-                  data-scroll-speed="0"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInRight"
-                    src="img/page-solutions/bubble-1.svg"
-                    alt=""
-                    data-pagespeed-url-hash="2366862577"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__icon-1 sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.7"
-                  data-mouse-speed-y="0.7"
-                  data-hovering-amplitude-y="7"
-                  data-hovering-offset="6"
-                  data-z-index="50"
-                  data-scroll-speed="-0.03"
-                  data-scroll-speed-x="-0.05"
-                  data-rotation="-130"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInLeft"
-                    src="img/third-section/icon-1.svg"
-                    alt=""
-                    data-pagespeed-url-hash="179842279"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__icon-2 sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.5"
-                  data-mouse-speed-y="0.5"
-                  data-hovering-amplitude-y="5"
-                  data-hovering-offset="5"
-                  data-z-index="50"
-                  data-scroll-speed="0.03"
-                  data-is-animation
-                  data-animation-from-x="-150"
-                  data-animation-from-y="50"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInUp"
-                    src="img/third-section/bubble-1.svg"
-                    alt=""
-                    data-pagespeed-url-hash="329068322"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__icon-3 sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.3"
-                  data-mouse-speed-y="0.3"
-                  data-hovering-amplitude-y="5"
-                  data-hovering-offset="8"
-                  data-z-index="50"
-                  data-rotation-speed="0.4"
-                  data-scroll-speed="0.03"
-                  data-scroll-speed-x="0.04"
-                  data-is-animation
-                  data-animation-from-x="150"
-                  data-animation-from-y="50"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInRight"
-                    src="img/page-solutions/icon-9.svg"
-                    alt=""
-                    data-pagespeed-url-hash="4293140358"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__torus sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.6"
-                  data-mouse-speed-y="0.6"
-                  data-hovering-amplitude-y="4"
-                  data-hovering-offset="2"
-                  data-z-index="50"
-                  data-scroll-speed="0.02"
-                  data-scroll-speed-x="-0.05"
-                  data-is-animation
-                  data-animation-from-x="-130"
-                  data-animation-from-y="80"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInLeft"
-                    src="img/page-solutions/torus-1.svg"
-                    alt=""
-                    data-pagespeed-url-hash="2750856384"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__bubble-2 sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.3"
-                  data-mouse-speed-y="0.3"
-                  data-hovering-amplitude-y="4"
-                  data-hovering-offset="11"
-                  data-z-index="50"
-                  data-scroll-speed="-0.01"
-                  data-scroll-speed-x="0.04"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInUp"
-                    src="img/page-solutions/bubble-3.svg"
-                    alt=""
-                    data-pagespeed-url-hash="2955862419"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__icon-4 sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.4"
-                  data-mouse-speed-y="0.4"
-                  data-hovering-amplitude-y="5"
-                  data-hovering-offset="13"
-                  data-z-index="50"
-                  data-scroll-speed="0.02"
-                  data-scroll-speed-x="0.02"
-                  data-is-animation
-                  data-animation-from-x="50"
-                  data-animation-from-y="150"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInUp"
-                    src="img/page-solutions/icon-10.svg"
-                    alt=""
-                    data-pagespeed-url-hash="796231374"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__globus sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.5"
-                  data-mouse-speed-y="0.6"
-                  data-hovering-amplitude-y="6"
-                  data-hovering-offset="7"
-                  data-z-index="50"
-                  data-scroll-speed="0.03"
-                  data-scroll-speed-x="-0.05"
-                  data-is-animation
-                  data-animation-from-x="-150"
-                  data-animation-from-y="10"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInLeft"
-                    src="img/page-solutions/globus.svg"
-                    alt=""
-                    data-pagespeed-url-hash="2026080239"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__icon-5 sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.3"
-                  data-mouse-speed-y="0.3"
-                  data-hovering-amplitude-y="6"
-                  data-hovering-offset="4"
-                  data-z-index="50"
-                  data-scroll-speed="0.02"
-                  data-scroll-speed-x="0.07"
-                  data-is-animation
-                  data-animation-from-x="150"
-                  data-animation-from-y="50"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInRight"
-                    src="img/page-solutions/icon-11.svg"
-                    alt=""
-                    data-pagespeed-url-hash="1090731295"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__icon-6 sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.3"
-                  data-mouse-speed-y="0.3"
-                  data-hovering-amplitude-y="3"
-                  data-hovering-offset="1"
-                  data-z-index="50"
-                  data-scroll-speed="-0.05"
-                  data-scroll-speed-x="0.01"
-                  data-is-animation
-                  data-animation-from-x="50"
-                  data-animation-from-y="150"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInDown"
-                    src="img/page-solutions/icon-12.svg"
-                    alt=""
-                    data-pagespeed-url-hash="1385231216"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__shield sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.6"
-                  data-mouse-speed-y="0.6"
-                  data-hovering-amplitude-y="6"
-                  data-hovering-offset="16"
-                  data-z-index="50"
-                  data-scroll-speed="-0.03"
-                  data-scroll-speed-x="-0.05"
-                  data-is-animation
-                  data-animation-from-x="-150"
-                  data-animation-from-y="50"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInLeft"
-                    src="img/page-solutions/shield.svg"
-                    alt=""
-                    data-pagespeed-url-hash="1968111502"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-                <div
-                  class="js-scrollable-img-wrapper img-wrapper main-section-for-agencies__man sprite"
-                  data-group="1"
-                  data-mouse-speed-x="0.5"
-                  data-mouse-speed-y="0.5"
-                  data-hovering-amplitude-y="5"
-                  data-hovering-offset="8"
-                  data-z-index="60"
-                  data-scroll-speed="-0.02"
-                  data-scroll-speed-x="0.02"
-                  data-is-animation
-                  data-animation-from-x="-150"
-                  data-animation-from-y="150"
-                  data-animation-duration="2.5"
-                  data-animation-offset="-100"
-                >
-                  <img
-                    class="wow animate__animated animate__fadeInUp"
-                    src="img/page-solutions/man-2.svg"
-                    alt=""
-                    data-pagespeed-url-hash="3474049898"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
-              </div>
-              <!-- END main-section-for-agencies__img-block -->
             </div>
           </section>
-          <!-- END price-section-pricing -->
-          <!-- BEGIN price-section-pricing -->
-          <section class="boxes-section-for-agencies" data-scroll-section>
-            <div
-              class="js-scrollable-img-wrapper boxes-section-for-agencies__rocks-left img-wrapper sprite"
-              data-group="2"
-              data-mouse-speed-x="0.55"
-              data-mouse-speed-y="0.55"
-              data-scroll-speed="0.25"
-              data-scroll-speed-x="-0.2"
-              data-z-index="100"
-              data-is-animation
-              data-animation-from-x="-90"
-              data-animation-from-y="-10"
-              data-animation-duration="1.7"
-            >
-              <img
-                src="img/page-for-agencies/rocks_left.png"
-                alt=""
-                data-pagespeed-url-hash="3053000569"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
-            </div>
-            <div
-              class="js-scrollable-img-wrapper boxes-section-for-agencies__rocks-middle img-wrapper sprite"
-              data-group="2"
-              data-mouse-speed-x="0.3"
-              data-mouse-speed-y="0.3"
-              data-scroll-speed="-0.25"
-              data-scroll-speed-x="0.05"
-              data-z-index="100"
-              data-is-animation
-              data-animation-from-x="30"
-              data-animation-from-y="-70"
-              data-animation-duration="1.8"
-            >
-              <img
-                src="img/page-for-agencies/rocks_middle.png"
-                alt=""
-                data-pagespeed-url-hash="3043989027"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
-            </div>
-            <div
-              class="js-scrollable-img-wrapper boxes-section-for-agencies__rocks-right img-wrapper sprite"
-              data-group="2"
-              data-mouse-speed-x="0.45"
-              data-mouse-speed-y="0.45"
-              data-scroll-speed="0.25"
-              data-scroll-speed-x="0.25"
-              data-z-index="100"
-              data-is-animation
-              data-animation-from-x="20"
-              data-animation-from-y="70"
-              data-animation-duration="1.7"
-            >
-              <img
-                src="img/page-for-agencies/rocks_right.png"
-                alt=""
-                data-pagespeed-url-hash="1088231824"
-                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-              />
-            </div>
-            <div
-              class="container container_small boxes-section-for-agencies__container"
-            >
-              <div class="boxes-section-for-agencies__box">
-                <div class="card__header card__header_small">
-                  <div class="img-wrapper card__bg">
-                    <img
-                      src="img/page-for-agencies/box_background_1.jpeg"
-                      alt=""
-                      data-pagespeed-url-hash="2192346928"
-                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                    />
-                  </div>
-                  <div class="card__header-inner">
-                    <div class="img-wrapper img-wrapper_contain card__icon">
-                      <img
-                        src="img/page-pricing/icon-2.png"
-                        alt=""
-                        data-pagespeed-url-hash="1125025672"
-                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                      />
-                    </div>
-                    <h4 class="card__title">Experiență dovedită</h4>
-                  </div>
+
+          <!-- ═══════════════════════════════════════════
+               4. CIFRE
+          ═══════════════════════════════════════════ -->
+          <section class="dn-stats" data-scroll-section>
+            <div class="container">
+              <div class="dn-stats__grid">
+                <div class="dn-stat">
+                  <div class="dn-stat__number">5+</div>
+                  <div class="dn-stat__label">Ani de experiență</div>
                 </div>
-                <div class="boxes-section-for-agencies__content">
-                  <p class="card__description">
-                    Avem experiență solidă în dezvoltare web, automatizare,
-                    integrare AI și soluții digitale personalizate. Folosim
-                    tehnologii moderne și bune practici pentru a livra produse
-                    stabile, sigure și ușor de scalat.
+                <div class="dn-stat">
+                  <div class="dn-stat__number">120+</div>
+                  <div class="dn-stat__label">Proiecte finalizate</div>
+                </div>
+                <div class="dn-stat">
+                  <div class="dn-stat__number">60+</div>
+                  <div class="dn-stat__label">Clienți activi</div>
+                </div>
+                <div class="dn-stat">
+                  <div class="dn-stat__number">98%</div>
+                  <div class="dn-stat__label">Clienți mulțumiți</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════
+               5. PROCES
+          ═══════════════════════════════════════════ -->
+          <section class="dn-process" data-scroll-section>
+            <div class="container">
+              <div class="dn-process__header">
+                <span class="dn-overline">Procesul nostru</span>
+                <h2 class="section-title section-title_small js-text-anim">
+                  <strong>De la idee la rezultat,<br />pas cu pas</strong>
+                </h2>
+              </div>
+              <div class="dn-process__steps">
+                <div class="dn-process__connector"></div>
+                <div class="dn-step">
+                  <div class="dn-step__number">1</div>
+                  <h3 class="dn-step__title">Descoperire & Strategie</h3>
+                  <p class="dn-step__text">Ascultăm, întrebăm și analizăm. Înțelegem obiectivele de business, publicul țintă și concurența pentru a contura o direcție clară.</p>
+                </div>
+                <div class="dn-step">
+                  <div class="dn-step__number">2</div>
+                  <h3 class="dn-step__title">Design & Dezvoltare</h3>
+                  <p class="dn-step__text">Creăm experiențe vizuale memorabile și le construim pe o fundație tehnică solidă — rapid, scalabil și optimizat pentru performanță.</p>
+                </div>
+                <div class="dn-step">
+                  <div class="dn-step__number">3</div>
+                  <h3 class="dn-step__title">Lansare & Creștere</h3>
+                  <p class="dn-step__text">Lansăm cu atenție, monitorizăm rezultatele și optimizăm continuu. Succesul tău pe termen lung este obiectivul nostru final.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════
+               6. ECHIPĂ & COMPETENȚE
+          ═══════════════════════════════════════════ -->
+          <section class="dn-team" data-scroll-section>
+            <div class="container">
+              <div class="dn-team__layout">
+                <div>
+                  <div class="dn-team__header">
+                    <span class="dn-overline">Echipa noastră</span>
+                    <h2 class="section-title section-title_small js-text-anim">
+                      <strong>Oameni pasionați,<br />rezultate concrete</strong>
+                    </h2>
+                  </div>
+                  <p class="dn-team__text">
+                    Suntem o echipă multidisciplinară de specialiști în web design, dezvoltare, SEO, branding și marketing digital. Colaborăm strâns cu fiecare client ca un departament digital intern al companiei tale.
                   </p>
-                </div>
-              </div>
-              <div class="boxes-section-for-agencies__box">
-                <div class="card__header card__header_small">
-                  <div class="img-wrapper card__bg">
-                    <img
-                      src="img/page-for-agencies/box_background_2.jpeg"
-                      alt=""
-                      data-pagespeed-url-hash="2117130915"
-                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                    />
-                  </div>
-                  <div class="card__header-inner">
-                    <div class="img-wrapper img-wrapper_contain card__icon">
-                      <img
-                        src="img/page-for-agencies/icon-1.png"
-                        alt=""
-                        data-pagespeed-url-hash="2910895498"
-                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                      />
-                    </div>
-                    <h4 class="card__title">Soluții adaptate</h4>
-                  </div>
-                </div>
-                <div class="boxes-section-for-agencies__content">
-                  <p class="card__description">
-                    Nu folosim șabloane universale. Analizăm obiectivele,
-                    procesele și provocările fiecărui client și construim
-                    soluții personalizate, adaptate exact nevoilor reale ale
-                    afacerii tale.
+                  <p class="dn-team__text">
+                    Nu externalizăm lucrările importante. Tot ce construim — de la strategie la cod — este creat în-casă, de oamenii noștri, cu responsabilitate deplină față de calitate și termen.
                   </p>
-                </div>
-              </div>
-              <div class="boxes-section-for-agencies__box">
-                <div class="card__header card__header_small">
-                  <div class="img-wrapper card__bg">
-                    <img
-                      src="img/page-for-agencies/box_background_3.jpeg"
-                      alt=""
-                      data-pagespeed-url-hash="2041914902"
-                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                    />
+                  <div class="dn-team__skills">
+                    <span class="dn-skill-tag">UI / UX Design</span>
+                    <span class="dn-skill-tag">WordPress & WooCommerce</span>
+                    <span class="dn-skill-tag">React & Next.js</span>
+                    <span class="dn-skill-tag">SEO tehnic</span>
+                    <span class="dn-skill-tag">Branding & Identitate</span>
+                    <span class="dn-skill-tag">Automatizare AI</span>
+                    <span class="dn-skill-tag">Social Media</span>
+                    <span class="dn-skill-tag">Email Marketing</span>
+                    <span class="dn-skill-tag">CRM & Integrări</span>
                   </div>
-                  <div class="card__header-inner">
-                    <div class="img-wrapper img-wrapper_contain card__icon">
-                      <img
-                        src="img/page-for-agencies/icon-2.png"
-                        alt=""
-                        data-pagespeed-url-hash="3205395419"
-                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                      />
+                </div>
+
+                <div class="dn-team__visual">
+                  <div class="dn-team__visual-grid">
+                    <div class="dn-team__visual-item">
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#00ffd4" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#00ffd4" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                      Design
                     </div>
-                    <h4 class="card__title">Colaborare transparentă</h4>
-                  </div>
-                </div>
-                <div class="boxes-section-for-agencies__content">
-                  <p class="card__description">
-                    Credem în comunicare clară, termene respectate și procese
-                    bine definite. Clientul este informat și implicat în fiecare
-                    etapă, de la strategie până la implementare.
-                  </p>
-                </div>
-              </div>
-              <div class="boxes-section-for-agencies__box">
-                <div class="card__header card__header_small">
-                  <div class="img-wrapper card__bg">
-                    <img
-                      src="img/page-for-agencies/box_background_4.jpeg"
-                      alt=""
-                      data-pagespeed-url-hash="1966698889"
-                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                    />
-                  </div>
-                  <div class="card__header-inner">
-                    <div class="img-wrapper img-wrapper_contain card__icon">
-                      <img
-                        src="img/page-for-agencies/icon-3.png"
-                        alt=""
-                        data-pagespeed-url-hash="3499895340"
-                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                      />
+                    <div class="dn-team__visual-item">
+                      <svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#7c05e2" stroke-width="1.5" stroke-linecap="round"/><polyline points="8 6 2 12 8 18" stroke="#7c05e2" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      Dev
                     </div>
-                    <h4 class="card__title">Focus pe rezultate</h4>
-                  </div>
-                </div>
-                <div class="boxes-section-for-agencies__content">
-                  <p class="card__description">
-                    Scopul nostru nu este doar livrarea tehnică, ci impactul
-                    real în business: procese automatizate, eficiență crescută,
-                    conversii mai bune și costuri operaționale reduse.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="animation-btn animation-btn_size_big animation-btn_style_ boxes-section-for-agencies__btn"
-            >
-              <span class="animation-btn__mask">Contact</span>
-              <a href="contact/index.htm" class="animation-btn__btn">Contact</a>
-            </div>
-          </section>
-          <!-- END price-section-pricing -->
-          <!-- BEGIN scale-up-section-pricing -->
-          <section class="scale-up-section-pricing" data-scroll-section>
-            <!-- BEGIN container -->
-            <div
-              class="container container_small scale-up-section-pricing__container"
-            >
-              <h2
-                class="section-title-v2 scale-up-section-pricing__section-title"
-              >
-                Misiunea noastră: <br />Dincolo de cod
-              </h2>
-              <p class="text scale-up-section-pricing__text">
-                Misiunea Atomics este să transforme procesele manuale și
-                fragmentate în ecosisteme digitale automatizate, care lucrează
-                constant pentru afacerea ta. Într-o piață care evoluează rapid,
-                ajutăm brandurile să fie mai mult decât vizibile online. Le
-                oferim instrumentele necesare pentru a scala, a lua decizii
-                bazate pe date și a domina piața prin soluții digitale
-                inteligente, flexibile și memorabile.
-              </p>
-              <!-- <a href="contacts.html" class="btn btn_size_big scale-up-section-pricing__btn">Contact us</a> -->
-              <div
-                class="animation-btn animation-btn_size_big animation-btn_style_ scale-up-section-pricing__btn"
-              >
-                <span class="animation-btn__mask"
-                  >Rezerva o sesiune de strategie</span
-                >
-                <a href="contact/index.htm" class="animation-btn__btn"
-                  >Automatizează acum</a
-                >
-              </div>
-              <div
-                class="js-scrollable-img-wrapper scale-up-section-pricing__rocket-fire img-wrapper sprite"
-                data-group="3"
-                data-mouse-speed-x="2"
-                data-mouse-speed-y="1"
-                data-scroll-speed="0"
-                data-hovering-amplitude-y="20"
-                data-hovering-speed="0.5"
-                data-z-index="120"
-                data-is-yoyo
-                data-yoyo-amplitude-y="1"
-                data-yoyo-amplitude-scale="-0.05"
-                data-yoyo-scale-speed="0.3"
-                data-rotation="1"
-              >
-                <img
-                  src="img/page-pricing/fire.svg"
-                  alt=""
-                  data-pagespeed-url-hash="2933945095"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-              <div
-                class="js-scrollable-img-wrapper scale-up-section-pricing__rocket-fire-1 img-wrapper sprite"
-                data-group="3"
-                data-mouse-speed-x="2"
-                data-mouse-speed-y="1"
-                data-scroll-speed="0"
-                data-hovering-amplitude-y="20"
-                data-hovering-speed="0.5"
-                data-z-index="120"
-                data-is-yoyo
-                data-yoyo-amplitude-y="1"
-                data-yoyo-amplitude-scale="-0.2"
-                data-yoyo-scale-speed="1"
-                data-rotation="1"
-              >
-                <img
-                  src="img/page-pricing/fire-1.svg"
-                  alt=""
-                  data-pagespeed-url-hash="1481580935"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-              <div
-                class="js-scrollable-img-wrapper scale-up-section-pricing__rocket-body img-wrapper sprite"
-                data-group="3"
-                data-mouse-speed-x="2"
-                data-mouse-speed-y="1"
-                data-scroll-speed="0"
-                data-hovering-amplitude-y="20"
-                data-hovering-speed="0.5"
-                data-z-index="125"
-                data-is-yoyo
-                data-yoyo-amplitude-y="2"
-              >
-                <img
-                  src="img/page-pricing/rocket-body.svg"
-                  alt=""
-                  data-pagespeed-url-hash="565294650"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-            </div>
-            <!-- END container -->
-            <!-- <div class="js-scrollable-img-wrapper scale-up-section-pricing__mask img-wrapper sprite"
-        data-group="2"
-        data-mask-id="scale-up-section-pricing-mask"
-        data-mouse-speed-x="0"
-        data-mouse-speed-y="0"
-        data-scroll-speed="0">
-        <img src="img/page-pricing/mask-2.svg" alt=""/>
-      </div> -->
-            <!-- ---- -->
-            <svg
-              class="scale-up-section-pricing__mask sprite"
-              viewBox="0 0 2560 1336"
-            >
-              <clipPath id="scale-up-mask">
-                <path
-                  fill="white"
-                  d="M387.129 1.2903C820.529 -22.6097 1022.83 293.19 1254.83 312.49C1472.43 330.59 1538.33 163.59 1732.13 163.59C1925.93 163.59 1929.73 259.99 2122.53 301.09C2288.63 336.49 2343.03 290.59 2459.53 396.59C2548.83 477.89 2532.53 697.79 2508.23 803.19C2482.43 914.89 2374.63 1097.19 2131.13 1097.19C1887.63 1097.19 1627.53 1016.19 1269.13 1042.79C664.929 1087.59 375.529 1347.59 222.929 1334.79C74.9285 1322.39 32.0285 1050.29 32.0285 741.09C32.0285 431.89 21.8286 21.3903 387.129 1.2903Z"
-                />
-              </clipPath>
-            </svg>
-            <div
-              class="js-blinking-stars scale-up-section-pricing__stars-bg"
-              data-number-density="11"
-              data-group="3"
-              data-z-index="119"
-              data-min-r="2"
-              data-max-r="4"
-              data-scroll-speed="0"
-              data-falling="true"
-              data-falling-speed="0.5"
-            ></div>
-            <div
-              class="js-blinking-stars scale-up-section-pricing__stars-bg"
-              data-number-density="8"
-              data-group="3"
-              data-z-index="119"
-              data-min-r="5"
-              data-max-r="7"
-              data-scroll-speed="0"
-              data-falling="true"
-              data-falling-speed="1"
-            ></div>
-            <div
-              class="js-blinking-stars scale-up-section-pricing__stars-bg"
-              data-number-density="5"
-              data-group="3"
-              data-z-index="119"
-              data-min-r="7"
-              data-max-r="10"
-              data-scroll-speed="0"
-              data-falling="true"
-              data-falling-speed="2"
-            ></div>
-            <div
-              class="js-scrollable-img-wrapper scale-up-section-pricing__bg img-wrapper sprite"
-              data-group="3"
-              data-mouse-speed-x="0"
-              data-mouse-speed-y="0"
-              data-scroll-speed="0"
-            >
-              <picture>
-                <source
-                  srcset="./img/page-pricing/mobile-bg.png"
-                  media="(max-width: 768px), (max-width: 1024px) and (orientation: portrait)"
-                />
-                <source srcset="./img/page-pricing/bg-blue-2.png" />
-                <img
-                  src="img/page-pricing/bg-blue-2.png"
-                  alt=""
-                  data-pagespeed-url-hash="2202624415"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </picture>
-            </div>
-            <div
-              class="js-falling-commets scale-up-section-pricing__falling-commets sprite"
-              data-group="3"
-            >
-              <div
-                class="js-falling-commets-settings"
-                data-width="10"
-                data-height="110"
-                data-angle="90"
-                data-number="4"
-                data-img="./img/page-pricing/falling-commet.png"
-              ></div>
-            </div>
-          </section>
-          <!-- END scale-up-section-pricing -->
-          <!-- BEGIN agencies-section-pricing -->
-          <section class="agencies-section-pricing" data-scroll-section>
-            <!-- BEGIN container -->
-            <div
-              class="container container_small agencies-section-pricing__container"
-            >
-              <h2
-                class="section-title-v2 agencies-section-pricing__section-title"
-              >
-                Ești gata să scriem împreună următorul capitol al afacerii tale?
-              </h2>
-              <h3
-                class="text"
-                style="font-weight: 600; margin-bottom: 20px; text-align: left"
-              >
-                Cum lucrăm?
-              </h3>
-              <p class="text" style="margin-bottom: 20px; text-align: left">
-                Abordarea noastră este structurată și orientată spre claritate:
-              </p>
-              <ul
-                class="text"
-                style="
-                  text-align: left;
-                  margin-left: 20px;
-                  margin-bottom: 20px;
-                  padding-left: 30px;
-                  list-style-type: disc;
-                "
-              >
-                <li style="margin-bottom: 10px">
-                  analizăm obiectivele și procesele existente
-                </li>
-                <li style="margin-bottom: 10px">
-                  definim arhitectura soluției digitale
-                </li>
-                <li style="margin-bottom: 10px">
-                  dezvoltăm și integrăm funcționalitățile necesare
-                </li>
-                <li style="margin-bottom: 10px">
-                  testăm, optimizăm și susținem implementarea
-                </li>
-              </ul>
-              <p class="text" style="text-align: left">
-                Fiecare etapă este documentată și comunicată clar, pentru a
-                asigura control, predictibilitate și rezultate consistente.
-              </p>
-              <!-- <a href="#" class="btn btn_size_big agencies-section-pricing__btn">Check the offer</a> -->
-              <div
-                class="animation-btn animation-btn_size_big animation-btn_style_ agencies-section-pricing__btn"
-              >
-                <span class="animation-btn__mask"
-                  >Rezervă o sesiune de strategie</span
-                >
-                <a href="contact/index.htm" class="animation-btn__btn"
-                  >Vezi pachetele disponibile</a
-                >
-              </div>
-            </div>
-            <!-- END container -->
-          </section>
-          <!-- END agencies-section-pricing -->
-          <section class="say-hello-section-pricing" data-scroll-section>
-            <!-- BEGIN say-hello -->
-            <div class="say-hello">
-              <div class="say-hello__inner">
-                <!-- <div class="js-scrollable-img-wrapper say-hello__stars-bg img-wrapper sprite"
-      data-mouse-speed-x="0"
-      data-mouse-speed-y="0"
-      data-z-index="400"
-      data-scroll-speed="0">
-      <picture>
-        <source srcset="./img/say-hello/mobile.png" media="(max-width: 768px), (max-width: 1024px) and (orientation: portrait)">
-        <source srcset="./img/say-hello/sky.svg">
-        <img src="img/say-hello/sky.svg" alt=""/>
-      </picture>
-    </div> -->
-                <div
-                  class="stars-twinkling__stars say-hello__masking say-hello__stars-bg"
-                ></div>
-                <div
-                  class="stars-twinkling__twinkling say-hello__masking say-hello__stars-bg"
-                ></div>
-                <!-- <div class="js-blinking-stars say-hello__stars-bg"
-				data-number-density="8"
-				data-z-index="9999"
-				data-min-r="2"
-				data-max-r="4"
-        data-scroll-speed="0"
-        data-falling="true"
-        data-falling-speed="0.5"
-        data-falling-direction="-1">
-			</div>
-			<div class="js-blinking-stars say-hello__stars-bg"
-				data-number-density="5"
-				data-z-index="9999"
-				data-min-r="5"
-				data-max-r="7"
-        data-scroll-speed="0"
-        data-falling="true"
-        data-falling-speed="0.7"
-        data-falling-direction="-1">
-			</div>
-      <div class="js-blinking-stars say-hello__stars-bg"
-				data-number-density="3"
-				data-z-index="9999"
-				data-min-r="7"
-				data-max-r="10"
-				data-scroll-speed="0"
-        data-falling="true"
-        data-falling-speed="1"
-        data-falling-direction="-1">
-			</div> -->
-                <div class="container say-hello__container">
-                  <h2
-                    class="section-title section-title_small say-hello__section-title-white"
-                  >
-                    Ai un proiect sau o idee?
-                  </h2>
-                  <div
-                    class="animation-btn animation-btn_size_big animation-btn_style_ say-hello-section__btn"
-                  >
-                    <span class="animation-btn__mask">Contact</span>
-                    <a href="contact/index.htm" class="animation-btn__btn"
-                      >Contact</a
-                    >
+                    <div class="dn-team__visual-item">
+                      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#ea2866" stroke-width="1.5"/><path d="M21 21l-4.35-4.35" stroke="#ea2866" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      SEO
+                    </div>
+                    <div class="dn-team__visual-item">
+                      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#00a0f6" stroke-width="1.5"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" stroke="#00a0f6" stroke-width="1.5"/></svg>
+                      Web
+                    </div>
+                    <div class="dn-team__visual-item">
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#00c694" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                      AI
+                    </div>
+                    <div class="dn-team__visual-item">
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="#00ffd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      Growth
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- END say-hello -->
           </section>
-          <!-- BEGIN footer -->
-          <footer class="footer" data-scroll-section>
-            <!-- BEGIN container -->
-            <div class="container footer__container">
-              <div class="footer__decor-line js-decor-line"></div>
-              <ul class="footer-list footer__footer-list js-footer-list">
-                <!-- BEGIN  item -->
-                <li class="footer-list__item footer-list__item_main">
-                  <div class="footer-list__item-logo">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      viewBox="0 0 77.07 77.07"
-                    >
-                      <defs>
-                        <linearGradient
-                          id="a"
-                          x1="19.33"
-                          y1="57.23"
-                          x2="53.88"
-                          y2="22.67"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop offset="0" stop-color="#fff" />
-                          <stop offset="0.28" stop-color="#00ffd4" />
-                          <stop offset="0.69" stop-color="#00cfe9" />
-                          <stop offset="1" stop-color="#009eff" />
-                        </linearGradient>
-                      </defs>
-                      <circle cx="38.53" cy="38.53" r="38.53" />
-                      <path
-                        d="M59,36.06a20.36,20.36,0,0,0-38.44-9.19l3.39,1.61a16.55,16.55,0,0,0,.44,16.15l-3.3,1.79-.43.23v11.9l28.25-.39,0-4.4A20.34,20.34,0,0,0,59,36.06ZM33,32.8v7.14l-5,2.74a12.45,12.45,0,0,1-.34-12.44ZM24.71,54.1v-5l2.19-1.18.29-.16,3.49-1.9,4.74-2.58h3.85c4.4,0,7.67-2.54,7.67-7s-3.27-7-7.69-7H35L30.17,27l-3.59-1.71A16.27,16.27,0,1,1,47.06,50.09a16.62,16.62,0,0,1-2.31,1.16v.34l0,2.51H24.71ZM37.24,39.55V32.93h2a3.07,3.07,0,0,1,3.37,3.3,3.24,3.24,0,0,1-3.39,3.32Z"
-                        fill="url(#a)"
-                      />
-                    </svg>
-                  </div>
-                  <h5 class="footer-list__item-name">DEVELO.PRESS</h5>
-                  <ul class="footer-list__sub-list">
-                    <li class="footer-list__sub-item">Wojciechowska 9a</li>
-                    <li class="footer-list__sub-item">20-704 Lublin</li>
-                    <li class="footer-list__sub-item">Poland</li>
-                  </ul>
-                </li>
-                <!-- END  item -->
-                <!-- BEGIN  item -->
-                <li class="footer-list__item js-toggle">
-                  <h5 class="footer-list__item-name js-trigger">Services</h5>
-                  <ul class="footer-list__sub-list js-content">
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Hire WordPress expert
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Emergency help
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Website migration to WordPress
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Design into WordPress
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        WordPress plugin development
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Theme customization
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- END  item -->
-                <!-- BEGIN  item -->
-                <li class="footer-list__item js-toggle">
-                  <h5 class="footer-list__item-name js-trigger">Solutions</h5>
-                  <ul class="footer-list__sub-list js-content">
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Outsourcing
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Small business
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Enterprise
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Website and e-commerce
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Freelancers
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- END  item -->
-                <!-- BEGIN  item -->
-                <li class="footer-list__item js-toggle">
-                  <h5 class="footer-list__item-name js-trigger">Resources</h5>
-                  <ul class="footer-list__sub-list js-content">
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Pricing
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link"> FAQ </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Sell your WordPress business
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Sitemap
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- END  item -->
-                <!-- BEGIN  item -->
-                <li class="footer-list__item js-toggle">
-                  <h5 class="footer-list__item-name js-trigger">Gizzoh</h5>
-                  <ul class="footer-list__sub-list js-content">
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        What we do
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Our team
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Why to chose us
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Book a call
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Career
-                      </a>
-                    </li>
-                    <li class="footer-list__sub-item">
-                      <a href="index.htm#" class="footer-list__link">
-                        Contact
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- END  item -->
-              </ul>
-            </div>
-            <!-- END container -->
-            <div class="footer__bg img-wrapper img-wrapper_contain">
-              <div
-                class="js-scrollable-img-wrapper footer__rock-big-1 img-wrapper sprite"
-                data-z-index="570"
-                data-scroll-speed="0.2"
-                data-hovering-offset="0"
-              >
-                <img
-                  class="wow animate__animated animate__fadeInUp"
-                  data-wow-duration="2s"
-                  src="img/footer/rock-big-1.png"
-                  alt=""
-                  data-pagespeed-url-hash="2090219191"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
+
+          <!-- ═══════════════════════════════════════════
+               7. CTA + FOOTER
+          ═══════════════════════════════════════════ -->
+          <div class="js-rocket-animation rocket-animation" data-scroll-section>
+            <div class="rocket-animation__inner">
+              <div class="js-scrollable-img-wrapper rocket-animation__rocket"
+                data-z-index="410" data-is-animation
+                data-animation-from-x="-2000" data-animation-to-x="2000"
+                data-animation-duration="5" data-animation-offset="-400"
+                data-animation-triger-child="smoke">
+                <picture><img src="img/rocket-animation/rocket.svg" alt="" /></picture>
               </div>
-              <div
-                class="js-scrollable-img-wrapper footer__rock-big-2 img-wrapper sprite"
-                data-z-index="570"
-                data-scroll-speed="0.1"
-                data-hovering-offset="0"
-              >
-                <img
-                  class="wow animate__animated animate__fadeInUp"
-                  data-wow-duration="2s"
-                  src="img/footer/rock-big-2.png"
-                  alt=""
-                  data-pagespeed-url-hash="2384719112"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-              <div
-                class="js-scrollable-img-wrapper footer__rock-big-3 img-wrapper sprite"
-                data-z-index="570"
-                data-scroll-speed="0.3"
-                data-hovering-offset="0"
-              >
-                <img
-                  class="wow animate__animated animate__fadeInUp"
-                  data-wow-duration="2s"
-                  src="img/footer/rock-big-3.png"
-                  alt=""
-                  data-pagespeed-url-hash="2679219033"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-              <div
-                class="js-scrollable-img-wrapper footer__rock-middle-1 img-wrapper sprite"
-                data-z-index="560"
-                data-scroll-speed="0.5"
-                data-hovering-offset="0"
-              >
-                <img
-                  class="wow animate__animated animate__fadeInUp"
-                  data-wow-duration="1.5s"
-                  data-wow-delay="0.5s"
-                  src="img/footer/rock-middle-1.png"
-                  alt=""
-                  data-pagespeed-url-hash="3899620452"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-              <div
-                class="js-scrollable-img-wrapper footer__rock-middle-2 img-wrapper sprite"
-                data-z-index="560"
-                data-scroll-speed="0.55"
-                data-hovering-offset="0"
-              >
-                <img
-                  class="wow animate__animated animate__fadeInUp"
-                  data-wow-duration="1.5s"
-                  data-wow-delay="0.5s"
-                  src="img/footer/rock-middle-2.png"
-                  alt=""
-                  data-pagespeed-url-hash="4194120373"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-              <div
-                class="js-scrollable-img-wrapper footer__rock-middle-3 img-wrapper sprite"
-                data-z-index="560"
-                data-scroll-speed="0.4"
-                data-hovering-offset="0"
-              >
-                <img
-                  class="wow animate__animated animate__fadeInUp"
-                  data-wow-duration="1.5s"
-                  data-wow-delay="0.5s"
-                  src="img/footer/rock-middle-3.png"
-                  alt=""
-                  data-pagespeed-url-hash="193652998"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-              <div
-                class="js-scrollable-img-wrapper footer__rock-small-1 img-wrapper sprite"
-                data-z-index="550"
-                data-scroll-speed="0.8"
-                data-hovering-offset="0"
-              >
-                <img
-                  class="wow animate__animated animate__fadeInUp"
-                  data-wow-duration="1s"
-                  data-wow-delay="1s"
-                  src="img/footer/rock-small-1.png"
-                  alt=""
-                  data-pagespeed-url-hash="4025079558"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </div>
-              <div
-                class="js-scrollable-img-wrapper footer__rock-small-2 img-wrapper sprite"
-                data-z-index="550"
-                data-scroll-speed="0.8"
-                data-hovering-offset="0"
-              >
-                <img
-                  class="wow animate__animated animate__fadeInUp"
-                  data-wow-duration="1s"
-                  data-wow-delay="1s"
-                  src="img/footer/rock-small-2.png"
-                  alt=""
-                  data-pagespeed-url-hash="24612183"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
+              <div class="js-scrollable-img-wrapper js-smoke rocket-animation__smoke"
+                data-z-index="400" data-is-animation
+                data-animation-from-x="-2000" data-animation-to-x="2000"
+                data-animation-duration="5" data-animation-offset="-400"
+                data-is-displacement-filter="true" data-displacement-filter-duration="1"
+                data-animation-triger-parent="smoke">
+                <picture><img src="img/rocket-animation/big-smoke.svg" alt="" /></picture>
               </div>
             </div>
-          </footer>
-          <!-- END footer -->
+
+            <section class="say-hello-section">
+              <div class="say-hello-section__bg-image"></div>
+              <div class="container say-hello-section__container js-say-hello">
+                <h2 class="section-title section-title_small say-hello-section__section-title js-text-anim">
+                  <strong>Hai să construim ceva împreună!</strong>
+                </h2>
+                <div class="animation-btn animation-btn_size_big animation-btn_style_ say-hello-section__btn">
+                  <span class="animation-btn__mask">Contacte</span>
+                  <a href="/contact.html" class="animation-btn__btn">Contacte</a>
+                </div>
+              </div>
+            </section>
+
+            <footer class="footer">
+              <div class="container footer__container">
+                <div class="footer__decor-line js-decor-line"></div>
+                <ul class="footer-list footer__footer-list js-footer-list">
+                  <li class="footer-list__item footer-list__item_main">
+                    <div class="footer-list__item-logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 77.07 77.07">
+                        <defs>
+                          <linearGradient id="footer-grad" x1="19.33" y1="57.23" x2="53.88" y2="22.67" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#fff"/><stop offset="0.28" stop-color="#00ffd4"/>
+                            <stop offset="0.69" stop-color="#00cfe9"/><stop offset="1" stop-color="#009eff"/>
+                          </linearGradient>
+                        </defs>
+                        <circle cx="38.53" cy="38.53" r="38.53"/>
+                        <path d="M59,36.06a20.36,20.36,0,0,0-38.44-9.19l3.39,1.61a16.55,16.55,0,0,0,.44,16.15l-3.3,1.79-.43.23v11.9l28.25-.39,0-4.4A20.34,20.34,0,0,0,59,36.06ZM33,32.8v7.14l-5,2.74a12.45,12.45,0,0,1-.34-12.44ZM24.71,54.1v-5l2.19-1.18.29-.16,3.49-1.9,4.74-2.58h3.85c4.4,0,7.67-2.54,7.67-7s-3.27-7-7.69-7H35L30.17,27l-3.59-1.71A16.27,16.27,0,1,1,47.06,50.09a16.62,16.62,0,0,1-2.31,1.16v.34l0,2.51H24.71ZM37.24,39.55V32.93h2a3.07,3.07,0,0,1,3.37,3.3,3.24,3.24,0,0,1-3.39,3.32Z" fill="url(#footer-grad)"/>
+                      </svg>
+                    </div>
+                    <h5 class="footer-list__item-name">Atomics</h5>
+                    <ul class="footer-list__sub-list">
+                      <li class="footer-list__sub-item">Chișinău, Moldova</li>
+                      <li class="footer-list__sub-item">079 979 732</li>
+                      <li class="footer-list__sub-item">hello@atomics.md</li>
+                    </ul>
+                  </li>
+                  <li class="footer-list__item js-toggle">
+                    <h5 class="footer-list__item-name js-trigger">Servicii</h5>
+                    <ul class="footer-list__sub-list js-content">
+                      <li class="footer-list__sub-item"><a href="/solutions.html" class="footer-list__link">Creare pagini web</a></li>
+                      <li class="footer-list__sub-item"><a href="/solutions.html" class="footer-list__link">SEO Optimizare</a></li>
+                      <li class="footer-list__sub-item"><a href="/solutions.html" class="footer-list__link">Integrări CRM</a></li>
+                      <li class="footer-list__sub-item"><a href="/solutions.html" class="footer-list__link">Social Media Marketing</a></li>
+                      <li class="footer-list__sub-item"><a href="/solutions.html" class="footer-list__link">Branding & Design</a></li>
+                    </ul>
+                  </li>
+                  <li class="footer-list__item js-toggle">
+                    <h5 class="footer-list__item-name js-trigger">Soluții</h5>
+                    <ul class="footer-list__sub-list js-content">
+                      <li class="footer-list__sub-item"><a href="/pricing.html" class="footer-list__link">Pachete lunare</a></li>
+                      <li class="footer-list__sub-item"><a href="/emergency-help.html" class="footer-list__link">Urgențe web</a></li>
+                      <li class="footer-list__sub-item"><a href="/solutions.html" class="footer-list__link">Mentenanță</a></li>
+                      <li class="footer-list__sub-item"><a href="/solutions.html" class="footer-list__link">Suport tehnic</a></li>
+                    </ul>
+                  </li>
+                  <li class="footer-list__item js-toggle">
+                    <h5 class="footer-list__item-name js-trigger">Resurse</h5>
+                    <ul class="footer-list__sub-list js-content">
+                      <li class="footer-list__sub-item"><a href="/pricing.html" class="footer-list__link">Prețuri</a></li>
+                      <li class="footer-list__sub-item"><a href="/despre-noi.html" class="footer-list__link">Despre noi</a></li>
+                      <li class="footer-list__sub-item"><a href="/contact.html" class="footer-list__link">Contact</a></li>
+                    </ul>
+                  </li>
+                  <li class="footer-list__item js-toggle">
+                    <h5 class="footer-list__item-name js-trigger">Atomics</h5>
+                    <ul class="footer-list__sub-list js-content">
+                      <li class="footer-list__sub-item"><a href="/despre-noi.html" class="footer-list__link">Cine suntem?</a></li>
+                      <li class="footer-list__sub-item"><a href="/solutions.html" class="footer-list__link">Ce facem?</a></li>
+                      <li class="footer-list__sub-item"><a href="/despre-noi.html" class="footer-list__link">De ce noi?</a></li>
+                      <li class="footer-list__sub-item"><a href="/contact.html" class="footer-list__link">Contactează-ne</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__bg img-wrapper img-wrapper_contain">
+                <div class="js-scrollable-img-wrapper footer__rock-big-1 img-wrapper sprite" data-z-index="570" data-scroll-speed="0.2" data-hovering-offset="0">
+                  <img class="wow animate__animated animate__fadeInUp" data-wow-duration="2s" src="img/footer/rock-big-1.png" alt="" />
+                </div>
+                <div class="js-scrollable-img-wrapper footer__rock-big-2 img-wrapper sprite" data-z-index="570" data-scroll-speed="0.1" data-hovering-offset="0">
+                  <img class="wow animate__animated animate__fadeInUp" data-wow-duration="2s" src="img/footer/rock-big-2.png" alt="" />
+                </div>
+                <div class="js-scrollable-img-wrapper footer__rock-big-3 img-wrapper sprite" data-z-index="570" data-scroll-speed="0.3" data-hovering-offset="0">
+                  <img class="wow animate__animated animate__fadeInUp" data-wow-duration="2s" src="img/footer/rock-big-3.png" alt="" />
+                </div>
+                <div class="js-scrollable-img-wrapper footer__rock-middle-1 img-wrapper sprite" data-z-index="560" data-scroll-speed="0.5" data-hovering-offset="0">
+                  <img class="wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s" src="img/footer/rock-middle-1.png" alt="" />
+                </div>
+                <div class="js-scrollable-img-wrapper footer__rock-middle-2 img-wrapper sprite" data-z-index="560" data-scroll-speed="0.55" data-hovering-offset="0">
+                  <img class="wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s" src="img/footer/rock-middle-2.png" alt="" />
+                </div>
+                <div class="js-scrollable-img-wrapper footer__rock-middle-3 img-wrapper sprite" data-z-index="560" data-scroll-speed="0.4" data-hovering-offset="0">
+                  <img class="wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s" src="img/footer/rock-middle-3.png" alt="" />
+                </div>
+                <div class="js-scrollable-img-wrapper footer__rock-small-1 img-wrapper sprite" data-z-index="550" data-scroll-speed="0.8" data-hovering-offset="0">
+                  <img class="wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="1s" src="img/footer/rock-small-1.png" alt="" />
+                </div>
+                <div class="js-scrollable-img-wrapper footer__rock-small-2 img-wrapper sprite" data-z-index="550" data-scroll-speed="0.8" data-hovering-offset="0">
+                  <img class="wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="1s" src="img/footer/rock-small-2.png" alt="" />
+                </div>
+              </div>
+            </footer>
+          </div>
+
         </main>
-        <!-- END main -->
       </div>
     </div>
-    <!-- END content -->
-    <!-- BEGIN scripts -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+
     <script type="text/javascript" src="app-ebea275ace.js"></script>
-    <!-- END scripts -->
   </body>
 </html>
