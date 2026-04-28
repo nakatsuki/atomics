@@ -1,0 +1,324 @@
+/* =============================================================
+   Atomics – UI/UX Enhancements
+   Injected after app.css. Overrides specific values only.
+   ============================================================= */
+
+/* ----------------------------------------------------------
+   1. Design Tokens
+   ---------------------------------------------------------- */
+:root {
+  --color-primary:    #7c05e2;
+  --color-primary-h:  #6200b5;
+  --color-accent:     #ea2866;
+  --color-accent-h:   #c4174d;
+  --color-teal:       #00c694;
+  --color-blue:       #00a0f6;
+  --color-dark:       #03010e;
+  --color-dark-alt:   #010f23;
+  --color-text-dark:  #4f3a5a;
+  --color-white:      #fff;
+
+  --focus-ring:       0 0 0 3px #00ffd4;
+  --focus-ring-dark:  0 0 0 3px #7c05e2;
+
+  --radius-btn:       45px;
+  --radius-card:      16px;
+
+  --transition-fast:  0.18s ease;
+  --transition-base:  0.28s ease;
+  --transition-slow:  0.4s ease;
+
+  --shadow-card:      0 8px 32px rgba(0, 0, 0, 0.18);
+  --shadow-card-h:    0 16px 48px rgba(0, 0, 0, 0.32);
+  --shadow-btn:       0 4px 18px rgba(124, 5, 226, 0.35);
+  --shadow-btn-h:     0 8px 28px rgba(124, 5, 226, 0.55);
+}
+
+/* ----------------------------------------------------------
+   2. Focus States – accesibile, contrast ridicat
+   ---------------------------------------------------------- */
+
+/* Resetăm outline-ul vechi #4f3a5a care nu era vizibil pe dark */
+a:focus,
+.btn:focus,
+.checkbox-input__input.focus-visible:focus + .checkbox-input__checkbox {
+  outline: none !important;
+}
+
+/* Focus vizibil pentru toată lumea */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring) !important;
+  border-radius: 4px;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring), var(--shadow-btn) !important;
+}
+
+.animation-btn__btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring) !important;
+}
+
+/* Checkbox focus */
+.checkbox-input__input:focus-visible + .checkbox-input__checkbox {
+  outline: none !important;
+  box-shadow: var(--focus-ring-dark) !important;
+}
+
+/* Input focus – accent mai clar */
+.text-input__input:focus,
+.text-input__textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(124, 5, 226, 0.2) !important;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* ----------------------------------------------------------
+   3. Butoane – micro-interacțiuni îmbunătățite
+   ---------------------------------------------------------- */
+.btn {
+  box-shadow: var(--shadow-btn);
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-fast),
+    color var(--transition-base) !important;
+  will-change: transform;
+}
+
+.btn:hover {
+  box-shadow: var(--shadow-btn-h) !important;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(124, 5, 226, 0.25) !important;
+}
+
+/* Butonul de accent (roz) */
+.btn:not(.btn_style_auxiliar):not([class*="_purple"]) {
+  background-color: var(--color-accent) !important;
+  box-shadow: 0 4px 18px rgba(234, 40, 102, 0.35) !important;
+}
+
+.btn:not(.btn_style_auxiliar):not([class*="_purple"]):hover {
+  background-color: var(--color-primary) !important;
+  box-shadow: var(--shadow-btn-h) !important;
+}
+
+/* ----------------------------------------------------------
+   4. Navigation – hover-uri fluide
+   ---------------------------------------------------------- */
+.nav__link:not(.animation-btn) {
+  position: relative;
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.nav__link:not(.animation-btn)::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-teal), var(--color-blue));
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--transition-base);
+}
+
+.nav__link:not(.animation-btn):hover::after,
+.nav__link:not(.animation-btn).is-active::after {
+  transform: scaleX(1);
+}
+
+/* ----------------------------------------------------------
+   5. Hamburger – tranziție animată + ARIA feedback
+   ---------------------------------------------------------- */
+.mobile-hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color var(--transition-fast);
+}
+
+.mobile-hamburger:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.mobile-hamburger:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.mobile-hamburger__sp {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  transition:
+    transform var(--transition-base),
+    opacity var(--transition-fast),
+    width var(--transition-base);
+}
+
+/* ----------------------------------------------------------
+   6. Cards – shadow + scale la hover
+   ---------------------------------------------------------- */
+.card {
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+  will-change: transform;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-h);
+  transform: translateY(-4px);
+}
+
+/* ----------------------------------------------------------
+   7. Linkuri – tranziție culoare
+   ---------------------------------------------------------- */
+a {
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* ----------------------------------------------------------
+   8. Tipografie – îmbunătățiri de lizibilitate
+   ---------------------------------------------------------- */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Spațiere pentru blocuri de text */
+p + p {
+  margin-top: 1em;
+}
+
+/* Lizibilitate corp de text */
+.text {
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+/* Titluri – spațiere optimă */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* ----------------------------------------------------------
+   9. Scroll behavior
+   ---------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ----------------------------------------------------------
+   10. Preloader – scroller personalizat (webkit)
+   ---------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ----------------------------------------------------------
+   11. Reducere mișcare – respectă preferința utilizatorului
+       (suplimentar față de app.css care dezactivează transition)
+   ---------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .btn,
+  .nav__link::after,
+  .mobile-hamburger__sp {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* ----------------------------------------------------------
+   12. Formulare – mesaje de eroare vizibile
+   ---------------------------------------------------------- */
+.text-input__input.is-error,
+.text-input__textarea.is-error {
+  border-color: #e53e3e !important;
+  box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.2) !important;
+}
+
+.text-input__error-msg {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #e53e3e;
+  font-weight: 500;
+}
+
+/* ----------------------------------------------------------
+   13. Imagine preloader – tranziție mai fluidă
+   ---------------------------------------------------------- */
+.preloader {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   14. Header – backdrop blur pe scroll
+   ---------------------------------------------------------- */
+.header.is-scrolled {
+  backdrop-filter: blur(12px) saturate(1.4);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  background-color: rgba(3, 1, 14, 0.85) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* ----------------------------------------------------------
+   15. Selection color – branding consistent
+   ---------------------------------------------------------- */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
