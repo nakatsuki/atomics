@@ -8148,7 +8148,7 @@ body.is-mobile-version .footer__rock-small-2 {
 }
 @media only screen and (max-width: 1919px) {
   .second-section__rectangle {
-    top: 200px;
+    top: 120px;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -8565,7 +8565,7 @@ body.is-mobile-version .footer__rock-small-2 {
     width: 320px;
     height: 335px;
     left: -500px;
-    top: 450px;
+    top: 200px;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -15344,19 +15344,13 @@ ul.second-section__text li strong {
   .say-hello-section__btn {
     min-width: 300px;
   }
-  /* Footerul mostenea #4f3a5a pe negru: titluri de acordeon si linkuri ilizibile. */
-  .footer-list {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  .footer-list__item-name {
-    color: #fff;
-  }
-  /* Linkurile se disting de textul static (ex. "Chișinău, Moldova"). */
+  /* Dupa fixul secventei rachetei, footerul sta pe fumul ALB (ca pe desktop),
+     deci movul #4f3a5a mostenit e corect; doar diferentiem linkurile de
+     textul static prin subliniere. */
   .footer-list__link {
-    color: #fff;
     text-decoration: underline;
-    -webkit-text-decoration-color: rgba(255, 255, 255, 0.45);
-    text-decoration-color: rgba(255, 255, 255, 0.45);
+    -webkit-text-decoration-color: rgba(79, 58, 90, 0.45);
+    text-decoration-color: rgba(79, 58, 90, 0.45);
     text-underline-offset: 4px;
   }
   /* Cale de contact explicita, cu tinta de tap >= 44px. */
@@ -15373,12 +15367,39 @@ ul.second-section__text li strong {
     min-height: 48px;
     margin: 8px 20px 0;
     padding: 0 20px;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(79, 58, 90, 0.45);
     border-radius: 45px;
-    color: #fff;
+    color: #4f3a5a;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
+  }
+}
+@media only screen and (max-width: 599px) {
+  /* Secventa rachetei ca pe desktop: la left:-300px fumul urias (~4750px
+     randat) acoperea viewportul de 390px inca DINAINTE de zbor (alb
+     instantaneu), iar la finalul zborului iesea prin dreapta (alb pierdut).
+     Ancorat la -3000px: start complet off-screen -> racheta se vede zburand
+     pe intuneric -> fumul se aseaza si ramane fundalul alb al footerului. */
+  .rocket-animation__smoke {
+    left: -3000px;
+    /* Declansarea zborului se calculeaza din pozitia fumului; coborat cu
+       450px, zborul porneste mai tarziu, cand traiectoria rachetei e la
+       mijlocul ecranului (altfel trecea pe sub marginea de jos, nevazuta).
+       Efect secundar dorit: albul se aseaza sub titlul galben, nu peste el. */
+    top: 450px;
+  }
+  /* Traiectoria rachetei coborata sub hubloul DOM (care acopera canvasul),
+     in banda pe care o matura fumul — racheta conduce vizual unda alba. */
+  .rocket-animation__rocket img {
+    top: 62%;
+  }
+  /* Racheta repozitionata pe creasta undei albe: cu fumul ancorat la
+     -3000px, marginea lui din fata e la x~1748; racheta la ~1655 zboara
+     exact pe creasta, pe jumatate pe intuneric — ca pe desktop. */
+  .rocket-animation__rocket {
+    left: 1655px;
+    right: auto;
   }
 }
 /* Butonul de email e o adaugire pentru mobil; pe desktop ramane "Scrie-ne". */
