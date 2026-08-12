@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Pagini tehnice care nu trebuie indexate (redirecturi si handlere)
+Disallow: /mailing/
+Disallow: /gtm.js
+Disallow: /contacts.html
+Disallow: /404.html
+
+Sitemap: https://atomics.md/sitemap.xml
