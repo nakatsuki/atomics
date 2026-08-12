@@ -15304,11 +15304,15 @@ ul.second-section__text li strong {
     bottom: 310px;
     left: -140px;
   }
+  /* Meteorii oranj mari coborati pe suprafata galbena a planetei —
+     banda de sus (carduri hero + roci) era prea incarcata. */
   .second-section__rock-group-4 {
-    top: 120px;
+    top: 1560px;
+    left: -130px;
   }
   .second-section__rock-2 {
-    top: 60px;
+    top: 350px;
+    left: -120px;
   }
   .second-section__rock-1 {
     top: 90px;
