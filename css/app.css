@@ -15275,9 +15275,16 @@ ul.second-section__text li strong {
    titlului. Toate regulile de mai jos sunt scoped la mobil.
    ============================================================ */
 @media only screen and (max-width: 768px) {
+  /* Discul ancorat de containerul de text: apexul chiar deasupra titlului
+     "Partenerul tau...", nu urcat in hero peste CTA si astronauti. */
   .second-section__planet {
     width: 2000px;
-    height: 2400px;
+    top: 0;
+    bottom: -300px;
+    height: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 @media only screen and (max-width: 599px) {
