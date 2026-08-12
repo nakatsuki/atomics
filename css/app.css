@@ -15288,10 +15288,11 @@ ul.second-section__text li strong {
   }
 }
 @media only screen and (max-width: 599px) {
+  /* Personajul albastru sta pe curba de sus a discului galben. */
   .second-section__man {
-    top: auto;
-    bottom: 40px;
-    left: 130px;
+    top: 250px;
+    bottom: auto;
+    left: 120px;
   }
   .second-section__icon-2 {
     top: auto;
