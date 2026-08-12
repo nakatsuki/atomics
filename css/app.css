@@ -15330,5 +15330,62 @@ ul.second-section__text li strong {
     display: none;
   }
 }
+/* ---- Lizibilitate finalul paginii pe mobil (titlu CTA + footer) ---- */
+@media only screen and (max-width: 767px) {
+  /* Titlul de conversie era #4f3a5a pe fundal aproape negru (contrast ~2:1).
+     Fundalul de aici nu e stabil: fumul alb al rachetei matura zona ~5s la
+     intrarea in sectiune, deci pe langa culoarea deschisa e nevoie de un
+     halou intunecat care tine literele lizibile si peste alb. */
+  .say-hello-section__section-title {
+    color: #ffe699;
+    text-shadow: 0 0 3px rgba(3, 1, 14, 0.95), 0 2px 14px rgba(3, 1, 14, 0.7);
+  }
+  /* Cel mai ingust CTA din pagina (min-width 220px); il aducem la nivelul celorlalte. */
+  .say-hello-section__btn {
+    min-width: 300px;
+  }
+  /* Footerul mostenea #4f3a5a pe negru: titluri de acordeon si linkuri ilizibile. */
+  .footer-list {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .footer-list__item-name {
+    color: #fff;
+  }
+  /* Linkurile se disting de textul static (ex. "Chișinău, Moldova"). */
+  .footer-list__link {
+    color: #fff;
+    text-decoration: underline;
+    -webkit-text-decoration-color: rgba(255, 255, 255, 0.45);
+    text-decoration-color: rgba(255, 255, 255, 0.45);
+    text-underline-offset: 4px;
+  }
+  /* Cale de contact explicita, cu tinta de tap >= 44px. */
+  .footer-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 48px;
+    margin: 8px 20px 0;
+    padding: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 45px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+/* Butonul de email e o adaugire pentru mobil; pe desktop ramane "Scrie-ne". */
+@media only screen and (min-width: 768px) {
+  .footer-contact {
+    display: none;
+  }
+}
 /*# sourceMappingURL=app.css.map */
 
