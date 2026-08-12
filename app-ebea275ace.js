@@ -36919,18 +36919,30 @@ object-assign
                       : this.instance.scroll[this.directionAxis] >
                         this.instance.limit[this.directionAxis]
                       ? this.setScroll(
-                          this.instance.scroll[this.directionAxis],
+                          this.axisSafeX(),
                           this.instance.limit[this.directionAxis]
                         )
                       : this.instance.scroll.y < 0
-                      ? this.setScroll(
-                          this.instance.scroll[this.directionAxis],
-                          0
-                        )
+                      ? this.setScroll(this.axisSafeX(), 0)
                       : this.setScroll(
-                          this.instance.scroll[this.directionAxis],
+                          this.axisSafeX(),
                           this.instance.delta[this.directionAxis]
                         );
+                  },
+                },
+                {
+                  /* Bug locomotive-scroll v4.1.1: pe ramura de clamping (rulata
+                     de update(), ex. la deschiderea unui acordeon) primul
+                     argument al setScroll — care devine scroll.x — primea
+                     valoarea axei curente, deci pe scroll vertical x lua
+                     valoarea lui y. Sprite-urile de pe canvas se pozitioneaza
+                     cu (x - scroll.x), deci sareau cu mii de px in stanga si
+                     disparea tot desenul (footerul ramanea negru). */
+                  key: "axisSafeX",
+                  value: function () {
+                    return "horizontal" === this.direction
+                      ? this.instance.scroll[this.directionAxis]
+                      : this.instance.scroll.x;
                   },
                 },
                 {
@@ -39932,7 +39944,12 @@ object-assign
                 (this.timeline = n.gsap
                   .timeline({
                     onComplete: function () {
-                      o.scroll.update();
+                      o.scroll.update(),
+                        /* Acordeonul schimba inaltimea sectiunii, dar
+                           sprite-urile de pe canvas se re-masoara doar la
+                           resize; fara semnalul asta rocile din footer raman
+                           pe pozitia veche si ajung peste textul extins. */
+                        window.dispatchEvent(new Event("resize"));
                     },
                   })
                   .to(this.contentNode, { duration: t, height: e }));
@@ -39951,7 +39968,9 @@ object-assign
                 (this.timeline = n.gsap
                   .timeline({
                     onComplete: function () {
-                      t.removeClass(), o.scroll.update();
+                      t.removeClass(),
+                        o.scroll.update(),
+                        window.dispatchEvent(new Event("resize"));
                     },
                   })
                   .to(this.contentNode, { duration: e, height: r }));

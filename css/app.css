@@ -15382,6 +15382,10 @@ ul.second-section__text li strong {
      Ancorat la -3000px: start complet off-screen -> racheta se vede zburand
      pe intuneric -> fumul se aseaza si ramane fundalul alb al footerului. */
   .rocket-animation__smoke {
+    /* Inaltime raportata la viewport, nu la sectiune (care creste cand se
+       deschide un acordeon in footer): altfel sprite-ul se re-scala si unda
+       alba aluneca peste "SERVICII". 135vh ≈ inaltimea anterioara. */
+    height: 135vh;
     left: -3000px;
     /* Declansarea zborului se calculeaza din pozitia fumului; coborat cu
        450px, zborul porneste mai tarziu, cand traiectoria rachetei e la
