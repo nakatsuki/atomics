@@ -8148,7 +8148,7 @@ body.is-mobile-version .footer__rock-small-2 {
 }
 @media only screen and (max-width: 1919px) {
   .second-section__rectangle {
-    top: 120px;
+    top: 200px;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -8565,7 +8565,7 @@ body.is-mobile-version .footer__rock-small-2 {
     width: 320px;
     height: 335px;
     left: -500px;
-    top: 200px;
+    top: 450px;
   }
 }
 @media only screen and (max-width: 599px) {
