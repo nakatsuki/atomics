@@ -10145,11 +10145,15 @@ ul.second-section__text li strong {
   }
 }
 .third-section__woman {
-  width: 25em;
+  width: 34em;
   height: 55em;
   top: 15em;
   left: 16.5em;
   z-index: 200;
+}
+.third-section__woman img {
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .third-section__sin-1 {
   width: 120px;
@@ -11523,10 +11527,14 @@ ul.second-section__text li strong {
   top: 25em;
 }
 .sixth-section__woman {
-  width: 15em;
-  height: 37em;
+  width: 24em;
+  height: 36em;
   left: -3em;
-  top: 25em;
+  top: 16em;
+}
+.sixth-section__woman img {
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .sixth-section__icon-1 {
   width: 7em;
