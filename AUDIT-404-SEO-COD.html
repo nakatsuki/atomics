@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ro-MD">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Audit SEO și cod – pagina 404 Atomics</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0c0719; --card:#17102b; --line:#372a59; --text:#f8f7fc; --muted:#beb6d2; --pink:#ef2367; --cyan:#48d7ee; --yellow:#ffcf57; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(circle at 85% 0,#27164c 0,transparent 33%),var(--bg); color:var(--text); font:16px/1.65 Arial,sans-serif; }
+    main { width:min(1080px,calc(100% - 32px)); margin:auto; padding:64px 0 88px; }
+    header { padding:36px; border:1px solid var(--line); border-radius:24px; background:linear-gradient(135deg,#251348,#151025); }
+    h1 { max-width:850px; margin:8px 0 12px; font-size:clamp(34px,6vw,68px); line-height:1.05; }
+    h2 { margin:0 0 18px; font-size:26px; }
+    p { margin:0; }
+    .eyebrow { color:var(--cyan); font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .lead,.muted { color:var(--muted); }
+    .summary { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:24px 0 0; }
+    .summary div,.card { border:1px solid var(--line); border-radius:18px; background:rgba(23,16,43,.9); }
+    .summary div { padding:18px; }
+    .summary strong { display:block; font-size:28px; }
+    section { margin-top:24px; }
+    .card { padding:28px; }
+    table { width:100%; border-collapse:collapse; }
+    th,td { padding:14px 12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--muted); font-size:13px; letter-spacing:.05em; text-transform:uppercase; }
+    tr:last-child td { border-bottom:0; }
+    .tag { display:inline-block; padding:3px 10px; border-radius:999px; font-weight:800; white-space:nowrap; }
+    .done { color:#071a12; background:#65e6ae; }
+    .p0 { color:#23040d; background:#ff719d; }
+    .p1 { color:#251800; background:var(--yellow); }
+    .p2 { color:#061c21; background:var(--cyan); }
+    code { padding:2px 6px; border-radius:6px; background:#080511; color:#eee8ff; }
+    ul { margin:8px 0 0; padding-left:22px; }
+    a { color:var(--cyan); }
+    @media (max-width:720px) { main{padding-top:24px} header,.card{padding:22px}.summary{grid-template-columns:1fr} table,tbody,tr,td{display:block} thead{display:none} td{padding:10px 0} td:first-child{padding-top:18px;font-weight:800} }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Atomics · raport tehnic</p>
+      <h1>Audit SEO și cod pentru pagina 404</h1>
+      <p class="lead">Stare după optimizare · 14 august 2026</p>
+      <div class="summary">
+        <div><strong>9</strong><span class="muted">corecții aplicate</span></div>
+        <div><strong>1</strong><span class="muted">verificare critică la server</span></div>
+        <div><strong>0 px</strong><span class="muted">overflow la 390 px</span></div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Rezultat</h2>
+      <p>Pagina este tradusă în română, are un mesaj clar, buton de revenire, linkuri utile și un footer Atomics complet. Metadatele indică motorului de căutare că pagina nu trebuie indexată, iar toate linkurile și resursele locale au fost validate.</p>
+    </section>
+
+    <section class="card">
+      <h2>Corecții implementate</h2>
+      <table>
+        <thead><tr><th>Stare</th><th>Element</th><th>Ce s-a schimbat</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Limbă și mesaj</td><td><code>lang="ro-MD"</code>, titlu, descriere, H1, CTA-uri și texte în română.</td></tr>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Indexare</td><td><code>noindex, follow</code>; pagina este deja exclusă și prin <code>robots.txt</code>.</td></tr>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Metadate</td><td>Title și description descriptive; Open Graph localizat pentru <code>ro_MD</code>; keywords învechite eliminate.</td></tr>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Recuperarea vizitatorului</td><td>Linkuri spre homepage, servicii și contact; CTA-ul principal a fost testat în browser.</td></tr>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Footer</td><td>Brand, adresă, email, telefon, Facebook, servicii, soluții, resurse și politica de confidențialitate.</td></tr>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Accesibilitate de bază</td><td>Un singur H1, structură semantică, denumire pentru navigarea utilă, imagini decorative fără text alternativ inutil și focus vizibil.</td></tr>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Încărcare</td><td>Imaginile decorative din footer folosesc lazy-loading; imaginea principală are prioritate și decodare asincronă.</td></tr>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Fără JavaScript</td><td>Preloaderul și canvasul nu blochează pagina; conținutul și listele din footer rămân accesibile.</td></tr>
+          <tr><td><span class="tag done">Rezolvat</span></td><td>Tracking</td><td>Fragmentul GTM defect și necondiționat a fost eliminat de pe pagina de eroare.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Priorități rămase</h2>
+      <table>
+        <thead><tr><th>Prioritate</th><th>Problemă</th><th>Recomandare</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag p0">P0 condiționat</span></td><td>Codul de răspuns HTTP nu poate fi garantat de fișierul HTML.</td><td>La publicare, orice adresă inexistentă trebuie să afișeze această pagină și să răspundă cu <code>404 Not Found</code>, nu <code>200 OK</code>. Dacă răspunde 200, remedierea este critică pentru SEO.</td></tr>
+          <tr><td><span class="tag p1">P1</span></td><td>Pagina încarcă pachetul general: aproximativ 1,43 MB JavaScript și 406 KB CSS.</td><td>Pe termen mediu, creați un bundle minim pentru 404 sau extrageți doar headerul, animația necesară și footerul. Nu este recomandată eliminarea directă a bundle-ului actual: controlează animațiile și scrollul paginii.</td></tr>
+          <tr><td><span class="tag p1">P1</span></td><td>Există 38 de imagini în document, în mare parte decorative.</td><td>Convertiți PNG/JPEG mari în WebP/AVIF și folosiți variante responsive. Păstrați ilustrația 404, dar comprimați activele.</td></tr>
+          <tr><td><span class="tag p2">P2</span></td><td>Titlurile acordeonului mobil din footer sunt elemente H3 controlate prin JavaScript.</td><td>Într-o revizie a componentelor globale, folosiți butoane reale cu <code>aria-expanded</code> și control complet din tastatură.</td></tr>
+          <tr><td><span class="tag p2">P2</span></td><td>Monitorizarea erorilor 404 nu mai pornește înaintea consimțământului.</td><td>Dacă este necesară analiza URL-urilor greșite, trimiteți un eveniment 404 numai după consimțământul pentru analytics.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Checklist de publicare</h2>
+      <ul>
+        <li>Deschideți o adresă care nu există, de exemplu <code>/pagina-test-inexistenta</code>.</li>
+        <li>Confirmați în Network sau cu <code>curl -I</code> că răspunsul este <code>404</code>.</li>
+        <li>Confirmați că serverul folosește <code>404.html</code> drept document de eroare.</li>
+        <li>Retestați homepage-ul și formularul de contact după publicare.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

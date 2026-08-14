@@ -57,7 +57,7 @@
         <header class="header js-header  header_style_logo-dark  ">
           <!-- BEGIN container -->
           <div class="container header__container">
-            <a href="./" class="js-logo logo header__logo">
+            <a href="/" class="js-logo logo header__logo">
               <svg class="logo__svg" viewBox="0 0 250 40">
                 <defs>
                   <linearGradient id="linear-gradient" x1="-1.06" y1="36" x2="28.99" y2="5.95" gradientUnits="userSpaceOnUse">
@@ -77,21 +77,21 @@
             <nav class="nav header__nav js-nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a href="for-agencies.html" class="nav__link">Despre noi</a>
+                  <a href="/for-agencies.html" class="nav__link">Despre noi</a>
                 </li>
                 <li class="nav__item">
-                  <a href="solutions.html" class="nav__link">Servicii</a>
+                  <a href="/solutions.html" class="nav__link">Servicii</a>
                 </li>
                 <li class="nav__item">
-                  <a href="emergency-help.html" class="nav__link">Soluții</a>
+                  <a href="/emergency-help.html" class="nav__link">Soluții</a>
                 </li>
                 <li class="nav__item">
-                  <a href="pricing.html" class="nav__link">Prețuri</a>
+                  <a href="/pricing.html" class="nav__link">Prețuri</a>
                 </li>
                 <li class="nav__item nav__item_btn">
                   <div class="animation-btn animation-btn_size_small animation-btn_style_ nav__link">
                     <span class="animation-btn__mask" aria-hidden="true">Contact</span>
-                    <a href="contact.html" class="animation-btn__btn">Contact</a>
+                    <a href="/contact.html" class="animation-btn__btn">Contact</a>
                   </div>
                 </li>
               </ul>
@@ -186,15 +186,16 @@
                 <h4 class="page-contacts__small-title"> Contact </h4>
                 <p class="text"> Atomics </p>
                 <p class="text"> Chișinău, Moldova </p>
-                <a class="text page-contacts__link" href="mailto:contact@atomics.md">contact@atomics.md</a>
+                <a class="text page-contacts__link" href="mailto:atomics.md@gmail.com">atomics.md@gmail.com</a>
+                <a class="text page-contacts__link" href="tel:+37379979732">+373 79 979 732</a>
               </div>
               <!-- BEGIN form -->
-              <form class="page-contacts__form form js-form" action="mailing/mail.php" method="POST">
+              <form class="page-contacts__form form js-form" action="/mailing/mail.php" method="POST">
                 <!-- BEGIN text-input -->
                 <div class="text-input page-contacts__text-input js-text-input" data-validation-length="3">
                   <label class="text-input__label">
                     <h4 class="text-input__placeholder">Nume*</h4>
-                    <input type="text" class="text-input__input" name="name">
+                    <input type="text" class="text-input__input" name="name" autocomplete="name" required>
                   </label>
                 </div>
                 <!-- END text-input -->
@@ -202,7 +203,7 @@
                 <div class="text-input page-contacts__text-input js-text-input" data-validation-length="3" data-validation-email>
                   <label class="text-input__label">
                     <h4 class="text-input__placeholder">Adresă de email*</h4>
-                    <input type="email" class="text-input__input" name="email">
+                    <input type="email" class="text-input__input" name="email" autocomplete="email" required>
                   </label>
                 </div>
                 <!-- END text-input -->
@@ -210,20 +211,15 @@
                 <div class="text-input page-contacts__text-input js-text-input" data-validation-length="3">
                   <label class="text-input__label">
                     <h4 class="text-input__placeholder">Mesajul tău*</h4>
-                    <textarea rows="10" class="text-input__textarea" name="message"></textarea>
+                    <textarea rows="10" class="text-input__textarea" name="message" required></textarea>
                   </label>
                 </div>
                 <!-- END text-input -->
-                <!-- BEGIN checkbox-input -->
-                <div class="checkbox-input js-checkbox-input" data-validation-checked>
-                  <label class="checkbox-input__label">
-                    <h4 class="checkbox-input__placeholder"> GDPR* </h4>
-                    <input type="checkbox" class="checkbox-input__input">
-                    <div class="checkbox-input__checkbox"></div>
-                    <p class="checkbox-input__description">Sunt de acord să primesc mesaje pe email de la Atomics</p>
-                  </label>
-                </div>
-                <!-- END checkbox-input -->
+                <p class="form-privacy-notice">
+                  Folosim datele trimise numai pentru a răspunde solicitării tale și pentru
+                  demersurile necesare unei eventuale colaborări. Vezi
+                  <a href="/politica-de-confidentialitate.html">Politica de confidențialitate</a>.
+                </p>
                 <div class="animation-btn animation-btn_size_big animation-btn_style_ form__btn page-contacts__form-btn">
                   <span class="animation-btn__mask">Trimite mesajul</span>
                   <button type="submit" class="animation-btn__btn">Trimite mesajul</button>
@@ -238,6 +234,7 @@
             <!-- BEGIN container -->
             <div class="container footer__container">
               <div class="footer__decor-line js-decor-line"></div>
+              <a href="/politica-de-confidentialitate.html" class="footer-legal-link">Politica de confidențialitate</a>
               <ul class="footer-list footer__footer-list js-footer-list">
                 <!-- BEGIN  item -->
                 <li class="footer-list__item footer-list__item_main">
@@ -266,22 +263,22 @@
                   <h5 class="footer-list__item-name js-trigger"> Services </h5>
                   <ul class="footer-list__sub-list js-content">
                     <li class="footer-list__sub-item">
-                      <a href="wordpress-developers.html" class="footer-list__link"> Hire WordPress expert </a>
+                      <a href="/wordpress-developers.html" class="footer-list__link"> Hire WordPress expert </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="emergency-help.html" class="footer-list__link"> Emergency help </a>
+                      <a href="/emergency-help.html" class="footer-list__link"> Emergency help </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="plugin-development.html" class="footer-list__link"> Website migration to WordPress </a>
+                      <a href="/plugin-development.html" class="footer-list__link"> Website migration to WordPress </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="website-migration.html" class="footer-list__link"> Design into WordPress </a>
+                      <a href="/website-migration.html" class="footer-list__link"> Design into WordPress </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="website-and-e-commerce.html" class="footer-list__link"> WordPress plugin development </a>
+                      <a href="/website-and-e-commerce.html" class="footer-list__link"> WordPress plugin development </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="solutions.html" class="footer-list__link"> Theme customization </a>
+                      <a href="/solutions.html" class="footer-list__link"> Theme customization </a>
                     </li>
                   </ul>
                 </li>
@@ -291,19 +288,19 @@
                   <h5 class="footer-list__item-name js-trigger"> Solutions </h5>
                   <ul class="footer-list__sub-list js-content">
                     <li class="footer-list__sub-item">
-                      <a href="solutions.html" class="footer-list__link"> Outsourcing </a>
+                      <a href="/solutions.html" class="footer-list__link"> Outsourcing </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="website-and-e-commerce.html" class="footer-list__link"> Small business </a>
+                      <a href="/website-and-e-commerce.html" class="footer-list__link"> Small business </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="plugin-development.html" class="footer-list__link"> Enterprise </a>
+                      <a href="/plugin-development.html" class="footer-list__link"> Enterprise </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="website-migration.html" class="footer-list__link"> Website and e-commerce </a>
+                      <a href="/website-migration.html" class="footer-list__link"> Website and e-commerce </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="emergency-help.html" class="footer-list__link"> Freelancers </a>
+                      <a href="/emergency-help.html" class="footer-list__link"> Freelancers </a>
                     </li>
                   </ul>
                 </li>
@@ -313,16 +310,16 @@
                   <h5 class="footer-list__item-name js-trigger"> Resources </h5>
                   <ul class="footer-list__sub-list js-content">
                     <li class="footer-list__sub-item">
-                      <a href="pricing.html" class="footer-list__link"> Pricing </a>
+                      <a href="/pricing.html" class="footer-list__link"> Pricing </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="pricing.html" class="footer-list__link"> FAQ </a>
+                      <a href="/pricing.html" class="footer-list__link"> FAQ </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="for-agencies.html" class="footer-list__link"> Sell your WordPress business </a>
+                      <a href="/for-agencies.html" class="footer-list__link"> Sell your WordPress business </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="contact.html" class="footer-list__link"> Sitemap </a>
+                      <a href="/contact.html" class="footer-list__link"> Sitemap </a>
                     </li>
                   </ul>
                 </li>
@@ -332,22 +329,22 @@
                   <h5 class="footer-list__item-name js-trigger"> Gizzoh </h5>
                   <ul class="footer-list__sub-list js-content">
                     <li class="footer-list__sub-item">
-                      <a href="for-agencies.html" class="footer-list__link"> What we do </a>
+                      <a href="/for-agencies.html" class="footer-list__link"> What we do </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="wordpress-developers.html" class="footer-list__link"> Our team </a>
+                      <a href="/wordpress-developers.html" class="footer-list__link"> Our team </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="for-agencies.html" class="footer-list__link"> Why to chose us </a>
+                      <a href="/for-agencies.html" class="footer-list__link"> Why to chose us </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="contact.html" class="footer-list__link"> Book a call </a>
+                      <a href="/contact.html" class="footer-list__link"> Book a call </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="for-agencies.html" class="footer-list__link"> Career </a>
+                      <a href="/for-agencies.html" class="footer-list__link"> Career </a>
                     </li>
                     <li class="footer-list__sub-item">
-                      <a href="contact.html" class="footer-list__link"> Contact </a>
+                      <a href="/contact.html" class="footer-list__link"> Contact </a>
                     </li>
                   </ul>
                 </li>

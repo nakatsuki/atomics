@@ -13,7 +13,7 @@
 
 declare(strict_types=1);
 
-const MAIL_TO      = 'contact@atomics.md';
+const MAIL_TO      = 'atomics.md@gmail.com';
 const MAIL_SUBJECT = 'Mesaj nou de pe atomics.md';
 
 header('Content-Type: application/json; charset=utf-8');

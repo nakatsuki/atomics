@@ -4,6 +4,7 @@
   height: 1em;
   fill: initial;
 }
+
 .icon-facebook {
   width: 0.53em;
 }
@@ -5581,6 +5582,70 @@ body.is-mobile-version .rocket-animation__smoke {
     font-size: 16px;
   }
 }
+
+/* Homepage intro: racheta ramane parte din experienta, dar continutul nu mai
+   asteapta initializarea canvasului sau incarcarea tuturor imaginilor. */
+.preloader.is-intro-controlled {
+  pointer-events: none;
+  -webkit-transition:
+    background-color 0.28s ease,
+    opacity 0.32s ease,
+    visibility 0.32s ease;
+  transition:
+    background-color 0.28s ease,
+    opacity 0.32s ease,
+    visibility 0.32s ease;
+}
+
+.preloader.is-intro-controlled:not(.is-finished) {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.preloader.is-content-visible {
+  background-color: transparent;
+}
+
+.preloader.is-content-visible .stars-twinkling__stars,
+.preloader.is-content-visible .preloader__logo,
+.preloader.is-content-visible .preloader__progress {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.22s ease, visibility 0.22s ease;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.preloader.is-intro-controlled .preloader__loader {
+  -webkit-transition:
+    opacity 0.52s ease-in,
+    -webkit-transform 0.52s cubic-bezier(0.55, 0.02, 0.84, 0.34);
+  transition:
+    opacity 0.52s ease-in,
+    transform 0.52s cubic-bezier(0.55, 0.02, 0.84, 0.34);
+  will-change: transform, opacity;
+}
+
+.preloader.is-launching .preloader__loader {
+  opacity: 0.82;
+  -webkit-transform: translate(-50%, -50%) translate(55vw, -65vh)
+    rotate(25deg) scale(0.64);
+  transform: translate(-50%, -50%) translate(55vw, -65vh) rotate(25deg)
+    scale(0.64);
+}
+
+.preloader.is-finished {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader.is-intro-controlled,
+  .preloader.is-intro-controlled .preloader__loader {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
 .stars-bg__stars,
 .stars-bg__stars:after {
   position: absolute;
@@ -10834,7 +10899,7 @@ ul.second-section__text li strong {
 }
 .fifth-section__text {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   max-width: 860px;
 }
 @media only screen and (max-width: 2559px) {
@@ -10844,7 +10909,42 @@ ul.second-section__text li strong {
 }
 @media only screen and (max-width: 1023px) {
   .fifth-section__text {
-    margin-bottom: 60px;
+    margin-bottom: 24px;
+  }
+}
+.fifth-section__services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 0 0 48px;
+  list-style: none;
+}
+.fifth-section__services li {
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 230, 153, 0.45);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffe699;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 767px) {
+  .fifth-section__services {
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+  .fifth-section__services li {
+    padding: 8px 12px;
+    font-size: 13px;
   }
 }
 .fifth-section__planet {
@@ -14712,7 +14812,7 @@ ul.second-section__text li strong {
 .img-section-404__mask {
   top: 0;
   left: 0;
-  width: 2560px;
+  width: 2800px;
   height: 750px;
 }
 @media only screen and (max-width: 1023px) {
@@ -14782,7 +14882,7 @@ ul.second-section__text li strong {
 .img-section-404__bg {
   top: 0;
   left: 0;
-  width: 2560px;
+  width: 2800px;
   height: auto;
 }
 @media only screen and (max-width: 1023px) {
@@ -15420,5 +15520,202 @@ ul.second-section__text li strong {
     display: none;
   }
 }
+
+/* Informare scurtă lângă formular; procesarea cererii nu este confundată
+   cu un acord obligatoriu pentru marketing. */
+.form-privacy-notice {
+  max-width: 620px;
+  margin: 22px 0 4px;
+  color: #4f3a5a;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.form-privacy-notice a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.form-privacy-notice a:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+.footer-legal-link {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin: 22px 0 8px;
+  color: #4f3a5a;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.footer-legal-link:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+@media only screen and (max-width: 767px) {
+  .page-contacts__headquarter-info {
+    position: relative;
+    z-index: 80;
+    width: fit-content;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .page-contacts__headquarter-info .page-contacts__link {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 7px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Conținutul hero rămâne într-un singur strat, deasupra decorului spațial. */
+.first-section__container {
+  z-index: 520;
+}
+.first-section__motto,
+.first-section__text {
+  position: relative;
+  z-index: 1;
+}
+.first-section__btn {
+  z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+  .first-section__btn.animation-btn_size_big {
+    min-width: 300px;
+  }
+}
+
+/* Pagina 404: text lizibil, căi rapide de revenire și navigare accesibilă. */
+.page-404 .text-section-404__container {
+  padding-top: 100px;
+  padding-right: 20px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+}
+.page-404 {
+  position: relative;
+  isolation: isolate;
+}
+.page-404 .img-section-404 {
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin-left: calc(50% - 50vw);
+  background: #10051f;
+  box-sizing: border-box;
+}
+.page-404 .img-section-404__img-block {
+  height: 100%;
+}
+.page-404 .img-section-404__mask {
+  height: 100%;
+}
+.page-404 .main-canvas {
+  z-index: 2;
+}
+.page-404 .text-section-404__title {
+  max-width: 1100px;
+}
+.page-404 .text-section-404__subtitle {
+  max-width: 900px;
+  font-size: clamp(24px, 2.25vw, 38px);
+  line-height: 1.35;
+}
+.text-section-404__help-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin-top: 24px;
+}
+.text-section-404__help-links a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: #4f3a5a;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.text-section-404__help-links a:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+.footer-list__item-logo img {
+  display: block;
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+@media only screen and (min-width: 1440px) {
+  .page-404 .img-section-404 {
+    padding-top: clamp(100px, calc((100svh - 600px) / 2), 180px);
+  }
+  .page-404 .img-section-404__torus {
+    width: 540px;
+    top: 210px;
+  }
+  .page-404 .img-section-404__bubble-big {
+    width: 350px;
+    top: 400px;
+  }
+  .page-404 .img-section-404__rock-big {
+    width: 400px;
+    top: 520px;
+    left: -650px;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .page-404 .img-section-404 {
+    padding-top: max(80px, calc((100svh - 320px) / 2));
+  }
+  .page-404 .img-section-404__bubble-big {
+    display: none;
+  }
+  .page-404 .text-section-404__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .page-404 .text-section-404__subtitle {
+    font-size: 22px;
+  }
+  .text-section-404__help-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 18px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1439px) {
+  .page-404 .img-section-404 {
+    padding-top: max(100px, calc((100svh - 450px) / 2));
+  }
+  .page-404 .img-section-404__bubble-big {
+    width: 300px;
+    top: 350px;
+  }
+  .page-404 .img-section-404__torus {
+    width: 500px;
+    top: 150px;
+  }
+  .page-404 .img-section-404__rock-big {
+    width: 340px;
+    top: 380px;
+    left: -480px;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
 
