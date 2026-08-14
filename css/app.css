@@ -10841,8 +10841,8 @@ ul.second-section__text li strong {
 }
 @media only screen and (max-width: 599px) {
   .fifth-section__container {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 360px;
+    padding-bottom: 120px;
   }
 }
 .fifth-section__starwars {
@@ -10996,7 +10996,7 @@ ul.second-section__text li strong {
   .fifth-section__blumba {
     width: 250px;
     height: 200px;
-    top: 0;
+    top: 120px;
     left: 100px;
   }
 }
@@ -11033,6 +11033,7 @@ ul.second-section__text li strong {
 @media only screen and (max-width: 599px) {
   .fifth-section__right-block {
     left: 100px;
+    top: 170px;
   }
 }
 .fifth-section__left-block {
