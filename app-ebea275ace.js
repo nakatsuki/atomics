@@ -30244,6 +30244,111 @@ object-assign
           })(),
           new T.default();
       },
+      heroAstronautFlight = function () {
+        if (
+          (window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+          !document.querySelector(".first-section__wooman")
+        )
+          return;
+        var t = document.querySelector(".first-section__wooman");
+        if (t.hasAttribute("data-flight-played")) return;
+        if ((t.setAttribute("data-flight-played", "true"), L)) {
+          var e = L.filter(function (t) {
+            return (
+              t.node &&
+              t.node.closest &&
+              t.node.closest(
+                ".first-section__wooman, .first-section__man"
+              )
+            );
+          });
+          if (e.length) {
+            return void e.forEach(function (t, e) {
+              var r = t.node.closest(
+                  ".first-section__wooman, .first-section__man"
+                ),
+                i = r.classList.contains("first-section__man") ? 1 : -1,
+                n = -(t.boundingY + t.height + 160),
+                o = window.innerHeight - t.boundingY + 140,
+                s = Math.min(90, 0.08 * window.innerWidth) * i;
+              t.heroFlightTimeline = u.default
+                .timeline({
+                  delay: 2.4 + 0.12 * e,
+                  onUpdate: function () {
+                    t.summAllCoords(), t.setPosition();
+                  },
+                  onComplete: function () {
+                    (t.animationX = 0),
+                      (t.animationY = 0),
+                      (t.sprite.alpha = 1),
+                      t.summAllCoords(),
+                      t.setPosition(),
+                      t.updateVisibility();
+                  },
+                })
+                .to(
+                  t,
+                  {
+                    duration: 1.25,
+                    animationX: s,
+                    animationY: n,
+                    ease: "power2.in",
+                  },
+                  0
+                )
+                .to(
+                  t.sprite,
+                  { duration: 0.2, alpha: 0, ease: "none" },
+                  1.05
+                )
+                .set(t, { animationX: -0.5 * s, animationY: o })
+                .set(t.sprite, { alpha: 1 })
+                .to(t, {
+                  duration: 1.75,
+                  animationX: 0,
+                  animationY: 0,
+                  ease: "power3.out",
+                });
+            });
+          }
+        }
+        [].concat(
+          P(
+            document.querySelectorAll(
+              ".first-section__wooman picture, .first-section__man picture"
+            )
+          )
+        ).forEach(function (t, e) {
+          var r = t.getBoundingClientRect(),
+            i = t.closest(".first-section__man") ? 1 : -1,
+            n = Math.min(90, 0.08 * window.innerWidth) * i;
+          u.default
+            .timeline({ delay: 2.4 + 0.12 * e })
+            .to(
+              t,
+              {
+                duration: 1.25,
+                x: n,
+                y: -(r.bottom + 160),
+                ease: "power2.in",
+              },
+              0
+            )
+            .to(t, { duration: 0.2, autoAlpha: 0, ease: "none" }, 1.05)
+            .set(t, {
+              x: -0.5 * n,
+              y: window.innerHeight - r.top + 140,
+            })
+            .set(t, { autoAlpha: 1 })
+            .to(t, {
+              duration: 1.75,
+              x: 0,
+              y: 0,
+              ease: "power3.out",
+            });
+        });
+      },
       H = function () {
         /* Guard: calea normala si fallback-ul de 5s pot ajunge amandoua aici
            pe conexiuni lente — a doua initializare ar crea al doilea canvas.
@@ -30578,6 +30683,7 @@ object-assign
               L.forEach(function (t) {
                 return t.play();
               }),
+              heroAstronautFlight(),
               setTimeout(function () {
                 M.play(), O.start();
               }, 300);
@@ -30591,7 +30697,8 @@ object-assign
           setTimeout(function () {
             S.default.hide(),
               M.play(),
-              new l.default.WOW({ offset: -50 }).init();
+              new l.default.WOW({ offset: -50 }).init(),
+              heroAstronautFlight();
           }, 300);
       };
     window.addEventListener("load", function () {}),
@@ -39476,7 +39583,8 @@ object-assign
           {
             key: "destroy",
             value: function () {
-              this.sprite.parent && this.sprite.parent.removeChild(this.sprite),
+              this.heroFlightTimeline && this.heroFlightTimeline.kill(),
+                this.sprite.parent && this.sprite.parent.removeChild(this.sprite),
                 this.sprite && this.sprite.destroy(),
                 this.ticker.remove(this.tick, this),
                 this.yoyoTimeline && this.yoyoTimeline.kill();
