@@ -186,7 +186,8 @@
                 <h4 class="page-contacts__small-title"> Contact </h4>
                 <p class="text"> Atomics </p>
                 <p class="text"> Chișinău, Moldova </p>
-                <a class="text page-contacts__link" href="mailto:contact@atomics.md">contact@atomics.md</a>
+                <a class="text page-contacts__link" href="mailto:atomics.md@gmail.com">atomics.md@gmail.com</a>
+                <a class="text page-contacts__link" href="tel:+37379979732">+373 79 979 732</a>
               </div>
               <!-- BEGIN form -->
               <form class="page-contacts__form form js-form" action="/mailing/mail.php" method="POST">
@@ -194,7 +195,7 @@
                 <div class="text-input page-contacts__text-input js-text-input" data-validation-length="3">
                   <label class="text-input__label">
                     <h4 class="text-input__placeholder">Nume*</h4>
-                    <input type="text" class="text-input__input" name="name">
+                    <input type="text" class="text-input__input" name="name" autocomplete="name" required>
                   </label>
                 </div>
                 <!-- END text-input -->
@@ -202,7 +203,7 @@
                 <div class="text-input page-contacts__text-input js-text-input" data-validation-length="3" data-validation-email>
                   <label class="text-input__label">
                     <h4 class="text-input__placeholder">Adresă de email*</h4>
-                    <input type="email" class="text-input__input" name="email">
+                    <input type="email" class="text-input__input" name="email" autocomplete="email" required>
                   </label>
                 </div>
                 <!-- END text-input -->
@@ -210,20 +211,15 @@
                 <div class="text-input page-contacts__text-input js-text-input" data-validation-length="3">
                   <label class="text-input__label">
                     <h4 class="text-input__placeholder">Mesajul tău*</h4>
-                    <textarea rows="10" class="text-input__textarea" name="message"></textarea>
+                    <textarea rows="10" class="text-input__textarea" name="message" required></textarea>
                   </label>
                 </div>
                 <!-- END text-input -->
-                <!-- BEGIN checkbox-input -->
-                <div class="checkbox-input js-checkbox-input" data-validation-checked>
-                  <label class="checkbox-input__label">
-                    <h4 class="checkbox-input__placeholder"> GDPR* </h4>
-                    <input type="checkbox" class="checkbox-input__input">
-                    <div class="checkbox-input__checkbox"></div>
-                    <p class="checkbox-input__description">Sunt de acord să primesc mesaje pe email de la Atomics</p>
-                  </label>
-                </div>
-                <!-- END checkbox-input -->
+                <p class="form-privacy-notice">
+                  Folosim datele trimise numai pentru a răspunde solicitării tale și pentru
+                  demersurile necesare unei eventuale colaborări. Vezi
+                  <a href="/politica-de-confidentialitate.html">Politica de confidențialitate</a>.
+                </p>
                 <div class="animation-btn animation-btn_size_big animation-btn_style_ form__btn page-contacts__form-btn">
                   <span class="animation-btn__mask">Trimite mesajul</span>
                   <button type="submit" class="animation-btn__btn">Trimite mesajul</button>
@@ -238,6 +234,7 @@
             <!-- BEGIN container -->
             <div class="container footer__container">
               <div class="footer__decor-line js-decor-line"></div>
+              <a href="/politica-de-confidentialitate.html" class="footer-legal-link">Politica de confidențialitate</a>
               <ul class="footer-list footer__footer-list js-footer-list">
                 <!-- BEGIN  item -->
                 <li class="footer-list__item footer-list__item_main">

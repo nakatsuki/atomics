@@ -8,14 +8,15 @@
     <meta http-equiv="content-language" content="ro-MD" />
 
     <!-- SEO -->
-    <title>
-      Atomics – Agenție Web Design & Soluții Digitale din Chișinău, Moldova
-    </title>
+    <title>Atomics – Website, CRM, AI, SEO și SMM în Moldova</title>
     <meta
       name="description"
-      content="Atomics este o agenție digitală din Chișinău, Moldova, specializată în web design modern, dezvoltare WordPress, e-commerce și soluții digitale pentru afaceri care vor impact real online."
+      content="Creăm website-uri și integrăm soluții CRM și AI pentru afaceri din Moldova. Oferim SEO, SMM și mentenanță lunară pentru website și CRM."
     />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <meta name="bingbot" content="index, follow" />
 
     <!-- Canonical -->
@@ -34,29 +35,35 @@
     <meta property="og:locale" content="ro_MD" />
     <meta
       property="og:title"
-      content="Atomics – Agenție Web Design & Soluții Digitale Moldova"
+      content="Atomics – Website, CRM, AI, SEO și SMM în Moldova"
     />
     <meta
       property="og:description"
-      content="Agenție digitală din Chișinău specializată în web design modern, dezvoltare WordPress și soluții digitale."
+      content="Creăm website-uri și integrăm soluții CRM și AI. Oferim SEO, SMM și mentenanță lunară pentru website și CRM."
     />
     <meta property="og:url" content="https://atomics.md/" />
     <meta property="og:image" content="https://atomics.md/img/og.png" />
+    <meta property="og:image:secure_url" content="https://atomics.md/img/og.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Atomics – Agenție Web Design din Chișinău, Moldova"
+      content="Atomics – servicii website, CRM, AI, SEO și SMM în Moldova"
     />
 
     <!-- Twitter / X / Discord -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Atomics – Agenție Web Design Moldova" />
+    <meta name="twitter:title" content="Atomics – Website, CRM, AI, SEO și SMM" />
     <meta
       name="twitter:description"
-      content="Web design modern și soluții digitale pentru afaceri din Moldova."
+      content="Website-uri, integrări CRM și AI, SEO, SMM și mentenanță lunară pentru afaceri din Moldova."
     />
     <meta name="twitter:image" content="https://atomics.md/img/og.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Atomics – servicii website, CRM, AI, SEO și SMM în Moldova"
+    />
 
     <!-- Favicons -->
     <!-- <link rel="icon" href="/img/favicons/favicon.ico" />
@@ -65,7 +72,7 @@
       <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png" />
      -->
     <!-- Styles -->
-    <link rel="stylesheet" href="/css/app.css?v=20260814-1" />
+    <link rel="stylesheet" href="/css/app.css?v=20260814-4" />
 
     <!-- Fallback fara JavaScript: preloaderul este ascuns de JS, deci fara el
          pagina ar ramane blocata pe ecranul de incarcare. -->
@@ -91,16 +98,105 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Atomics",
-        "url": "https://atomics.md",
-        "logo": "https://atomics.md/img/logo.png",
-        "inLanguage": "ro-MD",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chișinău",
-          "addressCountry": "MD"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://atomics.md/#organization",
+            "name": "Atomics",
+            "url": "https://atomics.md/",
+            "logo": "https://atomics.md/img/favicons/android-icon-192x192.png",
+            "description": "Servicii de creare website, integrare CRM și AI, SEO, SMM și mentenanță lunară pentru website și CRM.",
+            "email": "atomics.md@gmail.com",
+            "telephone": "+37379979732",
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=100090712822739"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Chișinău",
+              "addressCountry": "MD"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Moldova"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://atomics.md/#website",
+            "url": "https://atomics.md/",
+            "name": "Atomics",
+            "publisher": { "@id": "https://atomics.md/#organization" },
+            "inLanguage": "ro-MD"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://atomics.md/#webpage",
+            "url": "https://atomics.md/",
+            "name": "Atomics – Website, CRM, AI, SEO și SMM în Moldova",
+            "description": "Creăm website-uri și integrăm soluții CRM și AI pentru afaceri din Moldova. Oferim SEO, SMM și mentenanță lunară pentru website și CRM.",
+            "isPartOf": { "@id": "https://atomics.md/#website" },
+            "about": { "@id": "https://atomics.md/#organization" },
+            "inLanguage": "ro-MD"
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://atomics.md/#servicii",
+            "name": "Servicii Atomics",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Service",
+                  "name": "Creare website",
+                  "provider": { "@id": "https://atomics.md/#organization" },
+                  "areaServed": { "@type": "Country", "name": "Moldova" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Service",
+                  "name": "Integrare CRM",
+                  "provider": { "@id": "https://atomics.md/#organization" },
+                  "areaServed": { "@type": "Country", "name": "Moldova" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Service",
+                  "name": "Integrare AI",
+                  "provider": { "@id": "https://atomics.md/#organization" },
+                  "areaServed": { "@type": "Country", "name": "Moldova" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "Service",
+                  "name": "SEO și SMM",
+                  "provider": { "@id": "https://atomics.md/#organization" },
+                  "areaServed": { "@type": "Country", "name": "Moldova" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "Service",
+                  "name": "Mentenanță lunară pentru website și CRM",
+                  "provider": { "@id": "https://atomics.md/#organization" },
+                  "areaServed": { "@type": "Country", "name": "Moldova" }
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
 
@@ -147,7 +243,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <!-- BEGIN content -->
     <div class="out" data-barba="wrapper">
-      <div class="preloader js-preloader">
+      <div class="preloader js-preloader" aria-hidden="true">
         <!-- <div class="stars-bg">
     <div class='stars-bg__stars'></div>
     <div class='stars-bg__stars2'></div>
@@ -293,23 +389,25 @@
           <section class="first-section" data-scroll-section>
             <!-- BEGIN container -->
             <div class="container first-section__container">
-              <h1 class="motto first-section__motto js-text-anim">
-                Creăm experiențe digitale memorabile
-              </h1>
+              <p class="motto first-section__motto js-text-anim">
+                CRM-ul tău este pregătit pentru Legea 195/2024?
+              </p>
               <p class="text first-section__text js-text-anim">
-                Colaborăm cu branduri precum al tău pentru a crea experiențe
-                digitale care cresc indicatorii cheie și prezintă identitatea de
-                brand cu mândrie. Transformăm brandurile în experiențe digitale
-                memorabile.
+                Din 23 august 2026, noile reguli privind datele personale pot
+                necesita actualizări ale fluxurilor din CRM: consimțăminte,
+                drepturi, retenție și securitate. Atomics te ajută să verifici
+                și să adaptezi sistemul fără să-ți întrerupi activitatea.
               </p>
               <div
                 class="animation-btn animation-btn_size_big animation-btn_style_ first-section__btn"
               >
                 <span class="animation-btn__mask" aria-hidden="true"
-                  >Începe un proiect</span
+                  >Solicită evaluarea CRM</span
                 >
-                <a href="/contact.html" class="animation-btn__btn"
-                  >Începe un proiect</a
+                <a
+                  href="/contact.html?serviciu=crm-date-personale"
+                  class="animation-btn__btn"
+                  >Solicită evaluarea CRM</a
                 >
               </div>
               <div
@@ -330,7 +428,7 @@
             >
               <img
                 src="img/first-section/bg-1.jpg"
-                alt="beautiful background"
+                  alt=""
               />
             </div>
             <div
@@ -352,7 +450,7 @@
               data-mouse-speed-y="0.45"
               data-scroll-speed="0.5"
             >
-              <img src="img/first-section/stars-small.png" alt="stars" />
+              <img src="img/first-section/stars-small.png" alt="" />
             </div>
             <div
               class="first-section__stars img-wrapper img-wrapper_contain sprite"
@@ -807,19 +905,20 @@
           </section>
           <!-- END first-section -->
           <!-- BEGIN second-section -->
-          <section class="second-section" data-scroll-section>
+          <section class="second-section" id="servicii-home" data-scroll-section>
             <!-- BEGIN container -->
             <div class="container second-section__container">
-              <h2
+              <h1
                 class="section-title second-section__section-title js-text-anim"
               >
                 <br />
                 <strong>Partenerul tău în Transformare Digitală</strong>
-              </h2>
+              </h1>
               <ul class="text second-section__text">
                 <li>
-                  Nu suntem doar o agenție, suntem motorul tehnologic din
-                  spatele creșterii afacerii tale.
+                  Atomics ajută afacerile din Chișinău și din toată Moldova prin
+                  website-uri moderne, integrări CRM și AI, servicii SEO și SMM
+                  și mentenanță lunară.
                 </li>
                 <li>
                   <strong>Inovație prin AI și Automatizare</strong> - Optimizăm
@@ -1636,7 +1735,7 @@
           </section>
           <!-- END second-section -->
           <!-- BEGIN third-section -->
-          <section class="third-section" data-scroll-section>
+          <section class="third-section" id="crm-ai" data-scroll-section>
             <div
               class="js-scrollable-img-wrapper third-section__top-bg img-wrapper sprite"
               data-fit="fill"
@@ -2266,7 +2365,7 @@
           </section>
           <!-- END third-section -->
           <!-- BEGIN fourth-section -->
-          <section class="fourth-section" data-scroll-section>
+          <section class="fourth-section" id="website-uri" data-scroll-section>
             <div
               class="js-scrollable-img-wrapper fourth-section__bg img-wrapper sprite"
               data-fit="fill"
@@ -2607,8 +2706,8 @@
                   <img
                     class="wow animate__animated animate__fadeInRight"
                     data-wow-duration="2.5s"
-                    src="img/fourth-section/hero-man.png"
-                    alt="Astronaut care repară un site avariat"
+                    src="img/fourth-section/characters/security-maintenance-astronaut-v3.png"
+                    alt="Cosmonaut cu scut de verificare și instrumente de mentenanță"
                   />
                 </div>
                 <div
@@ -2673,7 +2772,7 @@
           </section>
           <!-- END fourth-section -->
           <!-- BEGIN fifth-section -->
-          <section class="fifth-section" data-scroll-section>
+          <section class="fifth-section" id="seo-smm" data-scroll-section>
             <!-- BEGIN container -->
             <div class="container fifth-section__container">
               <!-- BEGIN fifth-section__text-block -->
@@ -2682,24 +2781,30 @@
                   class="section-title section-title_small fifth-section__section-title js-text-anim"
                 >
                   <br />
-                  <strong> Fii găsit, obține rezultate și crește</strong>
+                  <strong>
+                    Creștem vizibilitatea afacerii tale prin SEO, SMM și
+                    promovare online</strong
+                  >
                 </h2>
                 <p class="text fifth-section__text">
-                  Site-ul tău web ar trebui să fie ușor de descoperit de către
-                  oameni, prin algoritmi și prin inteligență artificială.
-                  Încorporăm SEO tehnic și optimizare AI/LLM în fiecare
-                  reproiectare, asigurându-ne că site-ul tău este structurat
-                  pentru performanță, vizibilitate și scalabilitate pe termen
-                  lung. Ai nevoie de un plan de conținut pe măsură? Oferim
-                  strategie de conținut și optimizare conduse de oameni, ca un
-                  add-on dedicat.
+                  Construim strategii de promovare adaptate obiectivelor și
+                  publicului afacerii tale. Optimizăm site-ul pentru Google,
+                  planificăm comunicarea pe rețelele sociale și dezvoltăm
+                  campanii care atrag clienți relevanți. Monitorizăm rezultatele
+                  și ajustăm constant strategia pentru o prezență online mai
+                  puternică și rezultate măsurabile.
                 </p>
+                <ul class="fifth-section__services" aria-label="Servicii de promovare">
+                  <li>SEO tehnic</li>
+                  <li>Administrare social media</li>
+                  <li>Campanii de promovare</li>
+                </ul>
                 <div
                   class="animation-btn animation-btn_size_big animation-btn_style_ fifth-section__btn"
                 >
-                  <span class="animation-btn__mask">Comandă acum</span>
-                  <a href="/contact.html" class="animation-btn__btn"
-                    >Rezervă o sesiune de strategie</a
+                  <span class="animation-btn__mask">Solicită un plan de promovare</span>
+                  <a href="/contact.html?serviciu=seo-smm" class="animation-btn__btn"
+                    >Solicită un plan de promovare</a
                   >
                 </div>
               </div>
@@ -3079,7 +3184,7 @@
           </section>
           <!-- END fifth-section -->
           <!-- BEGIN sixth-section -->
-          <section class="sixth-section" id="sixth-section" data-scroll-section>
+          <section class="sixth-section" id="mentenanta" data-scroll-section>
             <!-- BEGIN container -->
             <div class="container sixth-section__container">
               <!-- BEGIN image-block -->
@@ -3343,25 +3448,24 @@
                   class="section-title section-title_small sixth-section__section-title js-text-anim"
                 >
                   <strong
-                    >Creează un brand clar și inconfundabil pentru tine</strong
+                    >Mentenanță lunară pentru website și CRM</strong
                   >
                   <br />
                 </h2>
                 <p class="text sixth-section__text">
-                  Brandul tău nu ar trebui să pară inconsistent, generic sau o
-                  idee ulterioară. Construim identități vizuale coerente care
-                  surprind esența ta, se conectează cu publicul tău și se
-                  manifestă impecabil în fiecare punct de contact, de la site-ul
-                  tău web la cărțile de vizită. Fiecare element este ghidat de o
-                  strategie, conceput pentru claritate și construit pentru a
-                  promova recunoașterea instantanee și încrederea de durată.
+                  Website-ul și sistemul CRM trebuie să rămână rapide, sigure și
+                  adaptate proceselor afacerii. Prin mentenanță lunară ne ocupăm
+                  de actualizări, backup, verificări de securitate, corectarea
+                  problemelor și suport tehnic. Pentru CRM monitorizăm
+                  integrările și automatizările, astfel încât echipa ta să poată
+                  lucra fără întreruperi.
                 </p>
                 <div
                   class="animation-btn animation-btn_size_big animation-btn_style_ sixth-section__btn"
                 >
-                  <span class="animation-btn__mask">Comandă acum</span>
-                  <a href="/contact.html" class="animation-btn__btn"
-                    >Rezervă o sesiune de strategie</a
+                  <span class="animation-btn__mask">Solicită un plan de mentenanță</span>
+                  <a href="/contact.html?serviciu=mentenanta" class="animation-btn__btn"
+                    >Solicită un plan de mentenanță</a
                   >
                 </div>
               </div>
@@ -3431,6 +3535,7 @@
               <!-- BEGIN container -->
               <div class="container footer__container">
                 <div class="footer__decor-line js-decor-line"></div>
+                <a href="/politica-de-confidentialitate.html" class="footer-legal-link">Politica de confidențialitate</a>
                 <ul class="footer-list footer__footer-list js-footer-list">
                   <!-- BEGIN item -->
                   <li class="footer-list__item footer-list__item_main">
@@ -3465,16 +3570,19 @@
                     <h3 class="footer-list__item-name js-trigger">Servicii</h3>
                     <ul class="footer-list__sub-list js-content">
                       <li class="footer-list__sub-item">
-                        <a href="/solutions.html" class="footer-list__link">Soluții WordPress</a>
+                        <a href="/website-and-e-commerce.html" class="footer-list__link">Creare website</a>
                       </li>
                       <li class="footer-list__sub-item">
-                        <a href="/website-and-e-commerce.html" class="footer-list__link">Site-uri și e-commerce</a>
+                        <a href="/contact.html?serviciu=crm" class="footer-list__link">Integrare CRM</a>
                       </li>
                       <li class="footer-list__sub-item">
-                        <a href="/plugin-development.html" class="footer-list__link">Dezvoltare plugin-uri</a>
+                        <a href="/contact.html?serviciu=ai" class="footer-list__link">Integrare AI</a>
                       </li>
                       <li class="footer-list__sub-item">
-                        <a href="/website-migration.html" class="footer-list__link">Migrare de site</a>
+                        <a href="/contact.html?serviciu=seo-smm" class="footer-list__link">SEO și SMM</a>
+                      </li>
+                      <li class="footer-list__sub-item">
+                        <a href="/contact.html?serviciu=mentenanta" class="footer-list__link">Mentenanță website și CRM</a>
                       </li>
                     </ul>
                   </li>
@@ -3639,9 +3747,10 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="/js/preloader-intro.js?v=20260814-2"></script>
     <script
       type="text/javascript"
-      src="app-ebea275ace.js?v=20260814-2"
+      src="app-ebea275ace.js?v=20260814-4"
     ></script>
     <!-- END scripts -->
   </body>

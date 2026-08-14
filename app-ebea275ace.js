@@ -30160,7 +30160,7 @@ object-assign
     }
     var O = d.scroll,
       I = d.removeListener;
-    S.default.show(), S.default.fakeLoaderBeginning(), O.stop();
+    S.default.show(), S.default.fakeLoaderBeginning();
     var C = void 0,
       M = void 0,
       R = void 0,
@@ -30834,6 +30834,8 @@ object-assign
             name: "opacity-transition",
             beforeLeave: function (t) {
               (j.appInited = !1),
+                window.AtomicsPreloaderIntro &&
+                  window.AtomicsPreloaderIntro.reset(),
                 S.default.updateProgress(1),
                 S.default.fakeLoaderBeginning(),
                 j.needScroll ||
